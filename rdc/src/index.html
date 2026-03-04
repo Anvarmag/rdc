@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--
+  ╔══════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                              ║
+  ║   РДЦ — РАДИОЛОГИЧЕСКИЙ ДАТА-ЦЕНТР                                           ║
+  ║   Главная страница сайта (Landing Page)                                       ║
+  ║                                                                              ║
+  ║   ОПИСАНИЕ:                                                                  ║
+  ║   Это основная страница сайта телерентгенологического центра.                ║
+  ║   Содержит информацию об услугах, команде врачей, преимуществах              ║
+  ║   и контактную информацию.                                                   ║
+  ║                                                                              ║
+  ║   СТРУКТУРА ФАЙЛА:                                                           ║
+  ║   1. HEAD - мета-теги, подключение стилей и скриптов                         ║
+  ║   2. HEADER - навигация сайта (фиксированная шапка)                          ║
+  ║   3. HERO - первый экран с главным сообщением                                ║
+  ║   4. METRICS - ключевые показатели центра                                    ║
+  ║   5. ABOUT - раздел "О нас"                                                  ║
+  ║   6. SERVICES - услуги центра                                                ║
+  ║   7. ADVANTAGES - преимущества                                               ║
+  ║   8. TEAM - команда врачей                                                   ║
+  ║   9. PARTNERS - раздел для партнеров                                         ║
+  ║   10. FOOTER - подвал сайта                                                  ║
+  ║   11. MODAL - модальное окно профиля врача                                   ║
+  ║   12. SCRIPTS - JavaScript для интерактива                                   ║
+  ║                                                                              ║
+  ║   ВАЖНО: Ищите пометки !!!!!ССЫЛКА для быстрого нахождения                   ║
+  ║   внешних ресурсов, которые можно заменить                                   ║
+  ║                                                                              ║
+  ╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<head>
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    МЕТА-ТЕГИ
+    ═══════════════════════════════════════════════════════════════════════
+    Эти теги определяют кодировку, адаптивность и базовые настройки страницы.
+    - charset: кодировка текста (UTF-8 поддерживает кириллицу)
+    - viewport: настройки для мобильных устройств
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>РДЦ — Радиологический дата-центр | Телерентгенология в Татарстане</title>
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    SEO МЕТА-ТЕГИ
+    ═══════════════════════════════════════════════════════════════════════
+    Эти теги помогают поисковым системам понять содержание страницы.
+    - description: краткое описание страницы (до 160 символов)
+    - keywords: ключевые слова для поиска
+    - author: автор/организация
+    - robots: инструкции для поисковых роботов
+  -->
+  <meta name="description"
+    content="Радиологический дата-центр (РДЦ) — первый региональный центр телерентгенологии в Республике Татарстан. Профессиональное дистанционное описание медицинских диагностических изображений МРТ, КТ, рентгена. Второе мнение от ведущих врачей-экспертов-рентгенологов. Быстрое получение результатов онлайн с гарантией качества и конфиденциальности.">
+  <meta name="keywords"
+    content="РДЦ, радиологический дата-центр, телерентгенология, телемедицина, МРТ, КТ, рентген, маммография, Казань, Татарстан, второе мнение">
+  <meta name="author" content="ГАУ РТ ДЦ МЗ РТ">
+  <meta name="robots" content="index, follow">
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    CANONICAL URL
+    ═══════════════════════════════════════════════════════════════════════
+    Указывает основной адрес страницы для поисковых систем,
+    чтобы избежать дублирования контента.
+    
+    !!!!!ССЫЛКА - CANONICAL URL - ЗАМЕНИТЕ НА РЕАЛЬНЫЙ ДОМЕН САЙТА
+  -->
+  <link rel="canonical" href="https://rdc-rt.ru/">
+
+  <!-- Альтернативные языковые версии для SEO -->
+  <link rel="alternate" hreflang="ru" href="https://rdc-rt.ru/index.html" />
+  <link rel="alternate" hreflang="en" href="https://rdc-rt.ru/index-en.html" />
+  <link rel="alternate" hreflang="tt" href="https://rdc-rt.ru/index-tt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://rdc-rt.ru/index.html" />
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    OPEN GRAPH МЕТА-ТЕГИ (для социальных сетей)
+    ═══════════════════════════════════════════════════════════════════════
+    Эти теги определяют, как страница будет отображаться при
+    публикации ссылки в социальных сетях (Facebook, VK, Telegram и др.)
+    
+    !!!!!ССЫЛКА - OG:URL - ЗАМЕНИТЕ НА РЕАЛЬНЫЙ ДОМЕН
+    !!!!!ССЫЛКА - OG:IMAGE - ЗАМЕНИТЕ НА РЕАЛЬНОЕ ИЗОБРАЖЕНИЕ ДЛЯ ПРЕВЬЮ
+  -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="РДЦ — Радиологический дата-центр | Телерентгенология">
+  <meta property="og:description"
+    content="Профессиональное дистанционное описание медицинских диагностических изображений. Второе мнение от ведущих врачей-экспертов-рентгенологов. Быстрое получение результатов онлайн с гарантией качества и конфиденциальности.">
+  <meta property="og:url" content="https://rdc-rt.ru/">
+  <meta property="og:site_name" content="РДЦ — Радиологический дата-центр">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image" content="https://rdc-rt.ru/images/og-image.jpg">
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    TWITTER CARD МЕТА-ТЕГИ
+    ═══════════════════════════════════════════════════════════════════════
+    Аналогично Open Graph, но для Twitter.
+    summary_large_image - показывает большое изображение.
+  -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="РДЦ — Радиологический дата-центр">
+  <meta name="twitter:description" content="Телерентгенология экспертного уровня в Республике Татарстан">
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    FAVICON (иконка сайта)
+    ═══════════════════════════════════════════════════════════════════════
+    Иконка, которая отображается во вкладке браузера и в закладках.
+    
+    !!!!!ССЫЛКА - FAVICON - ЛОКАЛЬНОЕ ИЗОБРАЖЕНИЕ ЛОГОТИПА
+  -->
+  <link rel="icon" type="image/png" href="./images/logo-new.png">
+  <link rel="apple-touch-icon" href="./images/logo-new.png">
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    THEME COLOR
+    ═══════════════════════════════════════════════════════════════════════
+    Цвет темы браузера на мобильных устройствах (адресная строка).
+    #2563eb - синий цвет бренда.
+  -->
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- 
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║                    ВНЕШНИЕ РЕСУРСЫ (CDN)                              ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+  -->
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    TAILWIND CSS (CDN)
+    ═══════════════════════════════════════════════════════════════════════
+    Tailwind CSS - утилитарный CSS-фреймворк.
+    Позволяет быстро стилизовать элементы с помощью классов прямо в HTML.
+    Например: class="bg-blue-500 text-white p-4 rounded"
+    
+    !!!!!ССЫЛКА - ВНЕШНИЙ СКРИПТ - TAILWIND CSS CDN
+  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    GOOGLE FONTS (Шрифт Inter)
+    ═══════════════════════════════════════════════════════════════════════
+    Inter - современный шрифт, оптимизированный для экранов.
+    preconnect - ускоряет загрузку, заранее устанавливая соединение.
+    
+    !!!!!ССЫЛКА - ВНЕШНИЙ ШРИФТ - GOOGLE FONTS INTER
+  -->
+  <!-- Локальный шрифт Inter -->
+  <link rel="stylesheet" href="fonts/inter.css">
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    LUCIDE ICONS (Иконки)
+    ═══════════════════════════════════════════════════════════════════════
+    Lucide - набор красивых SVG-иконок.
+    Использование: <i data-lucide="icon-name"></i>
+    После загрузки вызывается lucide.createIcons() для рендеринга.
+    
+    !!!!!ССЫЛКА - ВНЕШНИЙ СКРИПТ - LUCIDE ICONS CDN
+  -->
+  <script defer src="js/lib/lucide.min.js"></script>
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    ЛОКАЛЬНЫЕ CSS ФАЙЛЫ
+    ═══════════════════════════════════════════════════════════════════════
+    Модульные CSS файлы для организации стилей:
+    - variables.css: CSS-переменные (цвета, размеры)
+    - base.css: базовые стили и сброс
+    - components.css: стили компонентов
+    - utilities.css: вспомогательные классы
+    
+    !!!!!ССЫЛКА - ЛОКАЛЬНЫЕ CSS ФАЙЛЫ
+  -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+
+
+  <!--
+    ═══════════════════════════════════════════════════════════════════════
+    ВСТРОЕННЫЕ СТИЛИ (Internal Styles)
+    ═══════════════════════════════════════════════════════════════════════
+    Кастомные стили, которых нет в Tailwind CSS:
+    - glass-effect: эффект "стекла" с размытием фона
+    - gradient-text: градиентный текст
+    - float animation: анимация плавающих элементов
+    - modal animation: анимация появления модального окна
+    
+    Эти стили нельзя создать только с помощью классов Tailwind,
+    поэтому они определены здесь.
+  -->
+  <style>
+    /* Устанавливаем шрифт Inter для всей страницы */
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth
+    }
+
+    /* 
+      Glass effect (Эффект стекла)
+      Создает полупрозрачный фон с размытием того, что под ним.
+      backdrop-filter: blur() - ключевое свойство для эффекта.
+      Используется для шапки сайта при прокрутке.
+    */
+    .glass-effect {
+      background: rgba(255, 255, 255, .86);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px)
+    }
+
+    /* Fallback для браузеров без поддержки blur */
+    @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+      .glass-effect {
+        background: rgba(255, 255, 255, .94)
+      }
+    }
+
+    /* 
+      Gradient text (Градиентный текст)
+      Создает текст с градиентной заливкой вместо обычного цвета.
+      Работает через background-clip: text.
+    */
+    .gradient-text {
+      background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent
+    }
+
+    /* 
+      Float animation (Анимация плавания)
+      Элементы плавно двигаются вверх-вниз.
+      Используется для декоративных фоновых блоков.
+    */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite
+    }
+
+    /* Скрытие скроллбара (для модального окна) */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none
+    }
+
+    /* 
+      Modal animation (Анимация модального окна)
+      Плавное появление и масштабирование при открытии.
+    */
+    .modal-enter {
+      opacity: 0;
+      transform: scale(.98)
+    }
+
+    .modal-enter-active {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity .2s ease, transform .2s ease
+    }
+
+    /* 
+      Performance: Уважаем настройки пользователя для уменьшения анимации.
+      Некоторые пользователи могут испытывать головокружение от анимаций.
+    */
+    @media (prefers-reduced-motion: reduce) {
+      body {
+        scroll-behavior: auto
+      }
+
+      .animate-float {
+        animation: none !important
+      }
+
+      * {
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important
+      }
+    }
+
+    /* 
+      Performance: На тач-устройствах hover-эффекты не нужны,
+      так как нет курсора мыши.
+    */
+    @media (hover: none) {
+      .group:hover .group-hover\:scale-105 {
+        transform: none !important
+      }
+
+      .group:hover .group-hover\:scale-110 {
+        transform: none !important
+      }
+
+      .group:hover .group-hover\:rotate-1 {
+        transform: none !important
+      }
+    }
+
+    /* 
+      Performance: content-visibility: auto убрано, т.к. оно ломает
+      якорную навигацию — браузер не может корректно вычислить позицию
+      секций, которые ещё не отрендерены, и скролл промахивается.
+      Якорные ссылки начинают работать только со второго раза.
+    */
+
+    /* Легкий blur на мобильных для экономии ресурсов */
+    @media (max-width:640px) {
+      .glass-effect {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px)
+      }
+    }
+  </style>
+
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+
+  <!--
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║                    ДЕКОРАТИВНЫЕ ФОНОВЫЕ ЭЛЕМЕНТЫ                      ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+    
+    Два размытых круга создают "премиальное" ощущение на фоне.
+    - fixed inset-0: растягивает на весь экран и фиксирует
+    - pointer-events-none: не мешает кликам
+    - z-[-1]: помещает за весь контент
+    - blur-3xl: сильное размытие для мягкого эффекта
+    - animate-float: плавное движение вверх-вниз
+    
+    Можно отключить, удалив этот блок.
+  -->
+  <div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+    <div
+      class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-blue-100/30 blur-3xl animate-float">
+    </div>
+    <div
+      class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-100/20 blur-3xl animate-float"
+      style="animation-delay:-3s"></div>
+  </div>
+
+
+  <!--
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║                           HEADER (ШАПКА САЙТА)                        ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+    
+    НАЗНАЧЕНИЕ:
+    Фиксированная навигация в верхней части страницы.
+    
+    ОСОБЕННОСТИ:
+    - fixed: всегда видна при прокрутке
+    - При скролле добавляется белый фон и тень (через JS)
+    - Содержит логотип и меню
+    - Кнопка "Личный кабинет" временно отключена
+    - Адаптивная: на мобильных показывается бургер-меню
+    
+    РЕДАКТИРОВАНИЕ:
+    - Логотип: измените src в <img>
+    - Меню: измените ссылки href и текст
+    - Кнопка: измените текст и добавьте onclick
+  -->
+  <header id="siteHeader"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 shadow-sm py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+
+        <!-- 
+          ЛОГОТИП
+          Кликабельный блок с изображением и текстом.
+          group-hover: при наведении на родителя логотип увеличивается.
+          
+          !!!!!ССЫЛКА - ЛОГОТИП - ЛОКАЛЬНОЕ ИЗОБРАЖЕНИЕ
+        -->
+        <a href="#" class="flex items-center space-x-3 group" aria-label="РДЦ">
+          <img src="./images/logo-new.png" alt="RdC Logo"
+            class="w-12 h-12 transition-transform group-hover:scale-105" />
+          <div class="flex flex-col">
+            <span class="text-lg font-extrabold tracking-tight text-slate-900 leading-none"
+              data-i18n="logo_short">РДЦ</span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-semibold"
+              data-i18n="logo_subtitle">Дата-центр</span>
+          </div>
+        </a>
+
+        <!-- 
+          ДЕСКТОПНОЕ МЕНЮ
+          hidden md:flex - скрыто на мобильных, видно на планшетах и десктопах.
+          Ссылки ведут на якоря (#about, #services и т.д.) внутри страницы.
+          
+          !!!!!ССЫЛКА - КНОПКА - ЛИЧНЫЙ КАБИНЕТ (НУЖНО ДОБАВИТЬ ССЫЛКУ/ДЕЙСТВИЕ)
+          ВРЕМЕННО ОТКЛЮЧЕНО: Кнопка "Личный кабинет" закомментирована
+        -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            data-i18n="nav_about">О нас</a>
+          <a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            data-i18n="nav_services">Услуги</a>
+          <a href="#advantages" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            data-i18n="nav_advantages">Преимущества</a>
+          <a href="#team" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            data-i18n="nav_team">Наши специалисты</a>
+          <a href="#partners" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+            data-i18n="nav_partners">Сотрудничество</a>
+
+          <!-- КНОПКА ВЕРСИИ ДЛЯ СЛАБОВИДЯЩИХ (ДЕСКТОП) -->
+          <a href="accessible.html"
+            class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-2 rounded-lg text-sm font-bold transition-all flex items-center space-x-1.5"
+            title="Версия для слабовидящих" aria-label="Версия для слабовидящих" data-i18n-title="accessible_version">
+            <i data-lucide="eye" class="w-4 h-4"></i>
+            <span data-i18n="accessible_btn">Для слабовидящих</span>
+          </a>
+
+
+          <!-- ЯЗЫКИ (ДЕСКТОП) -->
+          <div class="flex items-center gap-2">
+            <a href="index.html" class="px-2 py-1 rounded text-sm font-bold transition-all bg-blue-600 text-white"
+              title="Русский" data-i18n="lang_short">RU</a>
+            <a href="index-tt.html"
+              class="px-2 py-1 rounded text-sm font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700"
+              title="Татарча">TT</a>
+            <a href="index-en.html"
+              class="px-2 py-1 rounded text-sm font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700"
+              title="English">EN</a>
+          </div>
+
+
+          <!-- !!!!!ССЫЛКА - КНОПКА - ЛИЧНЫЙ КАБИНЕТ (ВРЕМЕННО ОТКЛЮЧЕНО) -->
+          <!-- ВРЕМЕННО ОТКЛЮЧЕНО: Личный кабинет
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-md shadow-blue-100 flex items-center space-x-2"
+            type="button">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span >Личный кабинет</span>
+          </button>
+          -->
+        </nav>
+
+        <!-- 
+          КНОПКА МОБИЛЬНОГО МЕНЮ (бургер)
+          md:hidden - видна только на мобильных устройствах.
+          При клике открывает/закрывает #mobileMenu (см. JS ниже).
+        -->
+        <div class="md:hidden flex items-center">
+          <button id="mobileMenuBtn" class="text-slate-600 hover:text-slate-900 p-2" type="button" aria-label="Menu"
+            aria-expanded="false"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+      МОБИЛЬНОЕ МЕНЮ (выпадающее)
+      hidden - изначально скрыто, JS добавляет/убирает этот класс.
+      Содержит те же ссылки, что и десктопное меню.
+      
+      !!!!!ССЫЛКА - КНОПКА - ЛИЧНЫЙ КАБИНЕТ (МОБИЛЬНАЯ ВЕРСИЯ)
+      ВРЕМЕННО ОТКЛЮЧЕНО: Кнопка "Личный кабинет" (мобильная) закомментирована
+    -->
+    <div id="mobileMenu" class="md:hidden bg-white border-b border-slate-100 shadow-xl py-4 px-4 space-y-4 hidden">
+      <a href="#about" class="block text-base font-medium text-slate-700 hover:text-blue-600" data-i18n="nav_about">О
+        нас</a>
+      <a href="#services" class="block text-base font-medium text-slate-700 hover:text-blue-600"
+        data-i18n="nav_services">Услуги</a>
+      <a href="#advantages" class="block text-base font-medium text-slate-700 hover:text-blue-600"
+        data-i18n="nav_advantages">Преимущества</a>
+      <a href="#team" class="block text-base font-medium text-slate-700 hover:text-blue-600" data-i18n="nav_team">Наши
+        специалисты</a>
+      <a href="#partners" class="block text-base font-medium text-slate-700 hover:text-blue-600"
+        data-i18n="nav_partners">Сотрудничество</a>
+
+      <!-- КНОПКА ВЕРСИИ ДЛЯ СЛАБОВИДЯЩИХ (МОБИЛЬНАЯ) -->
+      <a href="accessible.html"
+        class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2"
+        title="Версия для слабовидящих" aria-label="Версия для слабовидящих" data-i18n-title="accessible_version">
+        <i data-lucide="eye" class="w-5 h-5"></i>
+        <span data-i18n="accessible_btn">Для слабовидящих</span>
+      </a>
+
+
+      <!-- ЯЗЫКИ (МОБИЛЬНАЯ) -->
+      <div class="flex justify-center gap-3 pt-2">
+        <a href="index.html" class="px-4 py-2 rounded-xl text-sm font-bold transition-all bg-blue-600 text-white"
+          data-i18n="lang_short">RU</a>
+        <a href="index-tt.html"
+          class="px-4 py-2 rounded-xl text-sm font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">TT</a>
+        <a href="index-en.html"
+          class="px-4 py-2 rounded-xl text-sm font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">EN</a>
+      </div>
+
+
+      <!-- !!!!!ССЫЛКА - КНОПКА - ЛИЧНЫЙ КАБИНЕТ (МОБИЛЬНАЯ) (ВРЕМЕННО ОТКЛЮЧЕНО) -->
+      <!-- ВРЕМЕННО ОТКЛЮЧЕНО: Личный кабинет (мобильная версия)
+      <button
+        class="w-full bg-blue-600 text-white px-4 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2"
+        type="button">
+        <i data-lucide="user" class="w-[18px] h-[18px]"></i>
+        <span >Личный кабинет</span>
+      </button>
+      -->
+    </div>
+  </header>
+
+  <main>
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║                         HERO (ПЕРВЫЙ ЭКРАН)                          ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Главный блок, который видит пользователь при загрузке страницы.
+      Содержит основное сообщение, призыв к действию и ключевую информацию.
+      
+      РЕДАКТИРОВАНИЕ:
+      - Фоновое изображение: измените url() в style
+      - Заголовок H1: основной текст страницы (важно для SEO!)
+      - Кнопки CTA: "Выбрать услугу" и "О центре"
+      - Блок справа: описание преимуществ
+      
+      !!!!!ССЫЛКА - ФОНОВОЕ ИЗОБРАЖЕНИЕ HERO СЕКЦИИ - ЗАМЕНИТЕ URL
+    -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
+      style="background-image: url('./images/hero-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- 
+        Overlay (полупрозрачный слой)
+        Улучшает читаемость текста на фоновом изображении.
+      -->
+      <div class="absolute inset-0 bg-white/60"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- ЛЕВАЯ КОЛОНКА: заголовок, описание, кнопки -->
+          <div class="relative z-10">
+            <!-- Белое свечение под текстом для лучшей читаемости -->
+            <div class="absolute inset-0 bg-white/80 rounded-[3rem] blur-2xl -z-10"></div>
+
+            <!-- Бейдж "Телемедицинский сервис" -->
+            <div
+              class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+              <span class="relative flex h-2 w-2">
+                <!-- Пульсирующая точка (анимация) -->
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              <span data-i18n="hero_badge">Телемедицинский сервис экспертного уровня</span>
+            </div>
+
+            <!-- 
+              H1 ЗАГОЛОВОК
+              Самый важный заголовок на странице для SEO.
+              Должен содержать ключевые слова и отражать суть страницы.
+            -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+              <span data-i18n="hero_title_1">Радиологический</span> <br />
+              <span class="gradient-text" data-i18n="hero_title_2">дата-центр</span>
+            </h1>
+
+            <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed" data-i18n="hero_description">
+              Профессиональное дистанционное описание медицинских диагностических изображений. Второе мнение от ведущих
+              врачей-экспертов-рентгенологов. Быстрое получение результатов онлайн с гарантией качества и
+              конфиденциальности.</p>
+
+            <!-- 
+              CTA КНОПКИ (Call-to-Action)
+              Основные действия, которые мы хотим от пользователя.
+              
+              !!!!!ССЫЛКА - КНОПКА - ВЫБРАТЬ УСЛУГУ (ДОБАВЬТЕ ДЕЙСТВИЕ)
+              !!!!!ССЫЛКА - КНОПКА - О ЦЕНТРЕ (ВЕДЕТ НА #about)
+            -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <!-- ССЫЛКА - КНОПКА - ВЫБРАТЬ УСЛУГУ (ведёт на #services) -->
+              <a href="#services"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all shadow-xl shadow-blue-200 flex items-center justify-center group">
+                <span data-i18n="hero_btn_services">Выбрать услугу</span>
+                <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <a href="#about"
+                class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-4 rounded-2xl text-lg font-bold transition-all text-center"
+                data-i18n="hero_btn_about">О центре</a>
+            </div>
+
+            <!-- Преимущества под кнопками -->
+            <div class="mt-10 grid grid-cols-1 gap-4">
+              <div class="flex items-center space-x-2">
+                <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i>
+                <span class="text-sm font-medium text-slate-600" data-i18n="hero_feature_1">Лицензия на осуществление
+                  медицинской деятельности Министерства здравоохранения Республики Татарстан</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ПРАВАЯ КОЛОНКА: информационная карточка -->
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-[3rem] blur-3xl transform rotate-3">
+            </div>
+            <div
+              class="relative bg-white/95 border border-white/50 p-8 sm:p-12 rounded-[3rem] shadow-2xl overflow-hidden group">
+              <!-- Декоративная иконка в углу -->
+              <div class="absolute top-0 right-0 p-4 opacity-10">
+                <i data-lucide="search" class="w-[120px] h-[120px]"></i>
+              </div>
+
+              <div class="relative space-y-8">
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-800 mb-4" data-i18n="hero_card_title">Телерентгенология
+                    экспертного класса</h3>
+                  <div class="h-1 w-20 bg-blue-600 rounded-full"></div>
+                </div>
+
+                <!-- Список преимуществ -->
+                <ul class="space-y-6">
+                  <li class="flex items-start space-x-4">
+                    <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <span class="text-blue-600 font-bold">1</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="hero_card_item_1">Описание исследований
+                      выполняют сертифицированные врачи-рентгенологи с многолетним опытом работы в области лучевой
+                      диагностики</p>
+                  </li>
+                  <li class="flex items-start space-x-4">
+                    <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <span class="text-blue-600 font-bold">2</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="hero_card_item_2">Дистанционная работа
+                      с цифровыми данными по результатам проведенных флюорографических, рентгенологических,
+                      маммографических, томографических исследований</p>
+                  </li>
+                  <li class="flex items-start space-x-4">
+                    <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                      <span class="text-blue-600 font-bold">3</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed" data-i18n="hero_card_item_3">Полное соответствие
+                      требованиям законодательства Российской Федерации в области охраны здоровья</p>
+                  </li>
+                </ul>
+
+                <!-- Блок "Защита данных" -->
+                <div class="bg-emerald-50 border border-emerald-100 p-6 rounded-2xl flex items-start space-x-4">
+                  <div class="bg-emerald-500 text-white p-2 rounded-lg">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-emerald-900 text-sm mb-1" data-i18n="hero_card_security_title">Защита
+                      данных</h4>
+                    <p class="text-emerald-700 text-xs" data-i18n="hero_card_security_text">Все каналы связи защищены по
+                      государственным стандартам безопасности.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║                        METRICS (МЕТРИКИ/KPI)                         ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Блок с ключевыми показателями работы центра.
+      Создает доверие, показывая масштаб и опыт организации.
+      
+      РЕДАКТИРОВАНИЕ:
+      - Измените цифры и подписи прямо в тексте
+      - Добавьте/удалите метрики (каждая в отдельном div)
+    -->
+    <section class="py-12 bg-white border-y border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <!-- Метрика 1: Год начала работы -->
+          <div class="text-center group">
+            <div
+              class="text-3xl md:text-4xl font-black text-blue-600 mb-2 transition-transform group-hover:scale-110 duration-300">
+              2022</div>
+            <div class="text-sm font-semibold text-slate-500 uppercase tracking-widest" data-i18n="metrics_year">Год
+              начала работы</div>
+          </div>
+          <!-- Метрика 2: Количество исследований -->
+          <div class="text-center group">
+            <div
+              class="text-3xl md:text-4xl font-black text-blue-600 mb-2 transition-transform group-hover:scale-110 duration-300">
+              100к+</div>
+            <div class="text-sm font-semibold text-slate-500 uppercase tracking-widest" data-i18n="metrics_research">
+              Исследований в год</div>
+          </div>
+          <!-- Метрика 3: ИИ-сервисы -->
+          <div class="text-center group">
+            <div
+              class="text-3xl md:text-4xl font-black text-blue-600 mb-2 transition-transform group-hover:scale-110 duration-300">
+              3+</div>
+            <div class="text-sm font-semibold text-slate-500 uppercase tracking-widest" data-i18n="metrics_ai">
+              ИИ-сервиса в работе</div>
+          </div>
+          <!-- Метрика 4: Режим работы -->
+          <div class="text-center group">
+            <div
+              class="text-3xl md:text-4xl font-black text-blue-600 mb-2 transition-transform group-hover:scale-110 duration-300">
+              24/7</div>
+            <div class="text-sm font-semibold text-slate-500 uppercase tracking-widest"
+              data-i18n="metrics_availability">Доступность сервиса</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║                          ABOUT (О НАС)                               ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Раздел с информацией о центре, его миссии и истории.
+      Содержит текстовое описание и визуальные элементы.
+      
+      РЕДАКТИРОВАНИЕ:
+      - Измените текст в <h2> и <p>
+      - Замените изображения (сейчас это заглушки picsum.photos)
+      
+      !!!!!ССЫЛКА - ИЗОБРАЖЕНИЯ В СЕКЦИИ "О НАС" - ЗАМЕНИТЕ НА РЕАЛЬНЫЕ ФОТО
+    -->
+    <section id="about" class="py-24 bg-slate-50 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+
+          <!-- ЛЕВАЯ КОЛОНКА: текст -->
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6">
+              <span data-i18n="about_title_1">Первый региональный центр</span> <br />
+              <span class="text-blue-600 underline decoration-blue-100 underline-offset-8"
+                data-i18n="about_title_2">телерентгенологии</span>
+            </h2>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6" data-i18n="about_text_1">РДЦ — первый региональный
+              медицинский центр телерентгенологии в Республике Татарстан, объединяющий команду опытных
+              врачей-рентгенологов и профильных врачей-экспертов. Большой опыт сотрудничества с медицинскими
+              организациями по расшифровке медицинских изображений обеспечивает доверие к нашей работе и уверенность в
+              результате.</p>
+
+
+            <!-- Блок "Наши контакты" -->
+            <div class="mt-10 p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+              <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
+                <span data-i18n="about_contacts_title">Наши контакты</span>
+              </h4>
+              <div class="space-y-4 text-sm text-slate-600">
+                <!-- Телефоны -->
+                <div class="flex items-center gap-2">
+                  <i data-lucide="phone" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+                  <span class="font-medium text-slate-800">+7 (843) 222-90-16</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="phone" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+                  <span class="font-medium text-slate-800">+7 (843) 222-90-17</span>
+                </div>
+                <!-- Email -->
+                <div class="flex items-center gap-2">
+                  <i data-lucide="mail" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+                  <span class="font-medium text-slate-800">rdc.rt@tatar.ru</span>
+                </div>
+                <!-- График работы -->
+                <div class="flex items-center gap-2">
+                  <i data-lucide="clock" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+                  <span class="font-medium text-slate-800" data-i18n="page_about_schedule">Пн–Пт: 8:00–17:00</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="calendar-check" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+                  <span class="font-medium text-slate-800" data-i18n="about_requests_247">Заявки принимаются 24/7</span>
+                </div>
+                <!-- ДЦ МЗ РТ -->
+                <div class="pt-3 border-t border-slate-100">
+                  <p class="font-medium text-slate-800" data-i18n="about_legal_name">Государственное автономное
+                    учреждение Республики Татарстан
+                    «Диспетчерский центр Министерства здравоохранения Республики Татарстан» (ДЦ МЗ РТ)</p>
+                  <p class="mt-1 flex items-center gap-2 text-slate-500">
+                    <i data-lucide="building-2" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+                    <span data-i18n="about_address_main">Адрес: 420073, г. Казань, ул. Аделя Кутуя, д. 88. Прием граждан
+                      по личным вопросам осуществляется по понедельникам, записаться на прием можно позвонив на номер 8
+                      (843) 221-16-90</span>
+                  </p>
+                </div>
+                <!-- РДЦ -->
+                <div class="pt-3 border-t border-slate-100">
+                  <p class="font-medium text-slate-800" data-i18n="about_rdc_name">Обособленное структурное
+                    подразделение ДЦ МЗ РТ «Радиологический
+                    дата-центр»</p>
+                  <p class="mt-1 flex items-center gap-2 text-slate-500">
+                    <i data-lucide="building-2" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+                    <span data-i18n="about_address_rdc">Адрес: 420064, г. Казань, ул. Оренбургский тракт, д. 138
+                      к.2</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 
+            ПРАВАЯ КОЛОНКА: изображения
+            Сетка из двух фотографий.
+            
+            !!!!!ССЫЛКА - ИЗОБРАЖЕНИЕ 1 - ЗАМЕНИТЕ URL НА РЕАЛЬНОЕ ФОТО
+            !!!!!ССЫЛКА - ИЗОБРАЖЕНИЕ 2 - ЗАМЕНИТЕ URL НА РЕАЛЬНОЕ ФОТО
+          -->
+          <div class="lg:w-1/2 relative">
+            <div class="grid grid-cols-2 gap-6">
+              <img src="images/about-1.jpg" alt="Врач анализирует МРТ снимки мозга"
+                class="rounded-3xl shadow-xl transform translate-y-8 object-cover w-full h-[320px] sm:h-[400px] lg:h-[480px]"
+                loading="lazy" decoding="async" />
+              <img src="images/about-2.jpg" alt="Рентгенолог изучает рентгеновские снимки"
+                class="rounded-3xl shadow-xl object-cover w-full h-[320px] sm:h-[400px] lg:h-[480px]" loading="lazy"
+                decoding="async" />
+            </div>
+            <!-- Декоративный блик -->
+            <div class="absolute -z-10 -bottom-10 -right-10 w-56 h-56 bg-blue-100/50 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Партнёры / логотипы -->
+    <section class="py-8 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center items-center gap-12 lg:gap-16">
+        <a href="https://roszdravnadzor.gov.ru/" target="_blank" rel="noopener noreferrer">
+          <img src="images/partners/partner1.png" alt="Росздравнадзор" class="h-12 sm:h-16" loading="lazy" />
+        </a>
+        <a href="https://www.fomsrt.ru/" target="_blank" rel="noopener noreferrer">
+          <img src="images/partners/partner2.png" alt="ФОМС РТ" class="h-12 sm:h-16" loading="lazy" />
+        </a>
+        <a href="https://16.rospotrebnadzor.ru/bytag/2/3/?ysclid=mm1y67m9bv929895120" target="_blank"
+          rel="noopener noreferrer">
+          <img src="images/partners/partner3.png" alt="Роспотребнадзор" class="h-12 sm:h-16" loading="lazy" />
+        </a>
+        <a href="https://www.akbarsmed.ru/?ysclid=mm1y6m9tsk650609953" target="_blank" rel="noopener noreferrer">
+          <img src="images/partners/partner4.png" alt="Акбарс Мед" class="h-12 sm:h-16" loading="lazy" />
+        </a>
+        <a href="https://xn----7sbnd1aifo8a2b.xn--p1ai/?ysclid=mm1y6rnsgi829104439" target="_blank"
+          rel="noopener noreferrer">
+          <img src="images/partners/partner5.png" alt="БиоМед" class="h-12 sm:h-16" loading="lazy" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="images/partners/partner6.png" alt="Партнёр 6" class="h-12 sm:h-16" loading="lazy" />
+        </a>
+      </div>
+    </section>
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║                        SERVICES (УСЛУГИ)                             ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Сетка карточек с описанием услуг центра.
+      Каждая карточка содержит иконку, заголовок, описание и кнопку.
+      
+      РЕДАКТИРОВАНИЕ:
+      - Измените иконки (data-lucide="icon-name")
+      - Измените тексты в карточках
+      - Добавьте/удалите карточки (копируйте div class="group p-8...")
+      
+      !!!!!ССЫЛКА - КНОПКИ "ПОДРОБНЕЕ" - ДОБАВЬТЕ ДЕЙСТВИЕ ИЛИ ССЫЛКУ
+    -->
+    <section id="services" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Заголовок секции -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4" data-i18n="services_title">Наши услуги
+          </h2>
+          <p class="text-lg text-slate-500 max-w-2xl mx-auto" data-i18n="services_subtitle">Описание и интерпретация
+            проведенных исследований по следующим видам диагностики</p>
+        </div>
+
+        <!-- Сетка карточек услуг (3 колонки на десктопе) -->
+        <div id="servicesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- КАРТОЧКА 1: МРТ -->
+          <div
+            class="group p-8 bg-slate-50 hover:bg-white rounded-3xl transition-all duration-300 border border-transparent hover:border-blue-100 hover:shadow-xl hover:shadow-blue-50 relative overflow-hidden flex flex-col justify-between h-full"
+            data-service-id="mri">
+            <!-- Декоративный угол (появляется при наведении) -->
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <!-- Иконка -->
+            <div
+              class="mb-6 bg-white w-16 h-16 rounded-2xl shadow-sm flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3">
+              <i data-lucide="search" class="w-8 h-8 text-blue-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors"
+              data-i18n="services_mri_title">МРТ</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="services_mri_desc">Высокоточная
+              диагностика мягких тканей, сосудов и внутренних органов без облучения.</p>
+            <!-- !!!!!ССЫЛКА - КНОПКА - ПОДРОБНЕЕ (МРТ) -->
+            <a href="services.html#mri"
+              class="flex items-center text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform mt-auto"><span
+                data-i18n="services_btn_more">Подробнее</span> <i data-lucide="chevron-right"
+                class="ml-1 w-4 h-4"></i></a>
+          </div>
+
+          <!-- КАРТОЧКА 2: КТ -->
+          <div
+            class="group p-8 bg-slate-50 hover:bg-white rounded-3xl transition-all duration-300 border border-transparent hover:border-blue-100 hover:shadow-xl hover:shadow-blue-50 relative overflow-hidden flex flex-col justify-between h-full"
+            data-service-id="ct">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <div
+              class="mb-6 bg-white w-16 h-16 rounded-2xl shadow-sm flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3">
+              <i data-lucide="search" class="w-8 h-8 text-blue-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors"
+              data-i18n="services_ct_title">КТ</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="services_ct_desc">Детальное исследование
+              костных структур и полых органов с помощью рентгеновского излучения.</p>
+            <!-- !!!!!ССЫЛКА - КНОПКА - ПОДРОБНЕЕ (КТ) -->
+            <a href="services.html#ct"
+              class="flex items-center text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform mt-auto"><span
+                data-i18n="services_btn_more">Подробнее</span> <i data-lucide="chevron-right"
+                class="ml-1 w-4 h-4"></i></a>
+          </div>
+
+          <!-- КАРТОЧКА 3: Рентген -->
+          <div
+            class="group p-8 bg-slate-50 hover:bg-white rounded-3xl transition-all duration-300 border border-transparent hover:border-blue-100 hover:shadow-xl hover:shadow-blue-50 relative overflow-hidden flex flex-col justify-between h-full"
+            data-service-id="xray">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <div
+              class="mb-6 bg-white w-16 h-16 rounded-2xl shadow-sm flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3">
+              <i data-lucide="search" class="w-8 h-8 text-blue-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors"
+              data-i18n="services_xray_title">Рентген</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="services_xray_desc">Классическая и
+              цифровая рентгенография для быстрой оценки состояния костей и легких.</p>
+            <!-- !!!!!ССЫЛКА - КНОПКА - ПОДРОБНЕЕ (РЕНТГЕН) -->
+            <a href="services.html#xray"
+              class="flex items-center text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform mt-auto"><span
+                data-i18n="services_btn_more">Подробнее</span> <i data-lucide="chevron-right"
+                class="ml-1 w-4 h-4"></i></a>
+          </div>
+
+          <!-- КАРТОЧКА 4: Маммография -->
+          <div
+            class="group p-8 bg-slate-50 hover:bg-white rounded-3xl transition-all duration-300 border border-transparent hover:border-blue-100 hover:shadow-xl hover:shadow-blue-50 relative overflow-hidden flex flex-col justify-between h-full"
+            data-service-id="mammography">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <div
+              class="mb-6 bg-white w-16 h-16 rounded-2xl shadow-sm flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3">
+              <i data-lucide="search" class="w-8 h-8 text-blue-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors"
+              data-i18n="services_mammography_title">Маммография</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="services_mammography_desc">
+              Профилактическое исследование молочных желез для раннего выявления новообразований.</p>
+            <!-- !!!!!ССЫЛКА - КНОПКА - ПОДРОБНЕЕ (МАММОГРАФИЯ) -->
+            <a href="services.html#mammography"
+              class="flex items-center text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform mt-auto"><span
+                data-i18n="services_btn_more">Подробнее</span> <i data-lucide="chevron-right"
+                class="ml-1 w-4 h-4"></i></a>
+          </div>
+
+          <!-- КАРТОЧКА 5: Флюорография -->
+          <div
+            class="group p-8 bg-slate-50 hover:bg-white rounded-3xl transition-all duration-300 border border-transparent hover:border-blue-100 hover:shadow-xl hover:shadow-blue-50 relative overflow-hidden flex flex-col justify-between h-full"
+            data-service-id="fluoro">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <div
+              class="mb-6 bg-white w-16 h-16 rounded-2xl shadow-sm flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3">
+              <i data-lucide="search" class="w-8 h-8 text-blue-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors"
+              data-i18n="services_fluoro_title">Флюорография</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="services_fluoro_desc">Массовое
+              скрининговое обследование органов грудной клетки с минимальной дозой облучения.</p>
+            <!-- !!!!!ССЫЛКА - КНОПКА - ПОДРОБНЕЕ (ФЛЮОРОГРАФИЯ) -->
+            <a href="services.html#fluoro"
+              class="flex items-center text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform mt-auto"><span
+                data-i18n="services_btn_more">Подробнее</span> <i data-lucide="chevron-right"
+                class="ml-1 w-4 h-4"></i></a>
+          </div>
+
+          <!-- КАРТОЧКА 6: Мультимодальные исследования -->
+          <div
+            class="group p-8 bg-slate-50 hover:bg-white rounded-3xl transition-all duration-300 border border-transparent hover:border-blue-100 hover:shadow-xl hover:shadow-blue-50 relative overflow-hidden flex flex-col justify-between h-full"
+            data-service-id="multimodal">
+            <div
+              class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <div
+              class="mb-6 bg-white w-16 h-16 rounded-2xl shadow-sm flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3">
+              <i data-lucide="search" class="w-8 h-8 text-blue-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight group-hover:text-blue-600 transition-colors"
+              data-i18n="services_multimodal_title">Мультимодальные исследования</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6" data-i18n="services_multimodal_desc">Комплексный
+              анализ данных нескольких видов диагностики для постановки сложного диагноза.</p>
+            <!-- !!!!!ССЫЛКА - КНОПКА - ПОДРОБНЕЕ (МУЛЬТИМОДАЛЬНЫЕ) -->
+            <a href="services.html#multimodal"
+              class="flex items-center text-blue-600 font-bold text-sm hover:translate-x-1 transition-transform mt-auto"><span
+                data-i18n="services_btn_more">Подробнее</span> <i data-lucide="chevron-right"
+                class="ml-1 w-4 h-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║              HOW IT WORKS (КАК ЭТО РАБОТАЕТ)                         ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Секция с 4 шагами, объясняющая процесс описания исследования.
+      Располагается после блока «Наши услуги».
+      
+      РЕДАКТИРОВАНИЕ:
+      - Измените тексты шагов (data-i18n ключи steps_*)
+      - Добавьте/удалите шаги
+    -->
+    <section id="how-it-works" class="py-24 bg-gradient-to-b from-slate-50 to-blue-50/30 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Заголовок секции -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4" data-i18n="steps_title">Как происходит
+            описание исследования</h2>
+          <p class="text-slate-500 text-lg max-w-2xl mx-auto" data-i18n="steps_subtitle">Простой и понятный процесс
+            получения экспертного заключения</p>
+        </div>
+
+        <!-- Сетка шагов -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+
+          <!-- Соединительная линия (только desktop) -->
+          <div class="hidden lg:block absolute top-[3.5rem] left-[calc(12.5%+2rem)] right-[calc(12.5%+2rem)] h-0.5"
+            aria-hidden="true">
+            <div class="w-full h-full border-t-2 border-dashed border-blue-200"></div>
+          </div>
+
+          <!-- Шаг 1 -->
+          <div
+            class="group bg-white rounded-3xl p-8 shadow-lg shadow-slate-100 border border-slate-100 hover:shadow-xl hover:shadow-blue-100/50 hover:-translate-y-1 transition-all duration-300 relative z-10 text-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200/50 group-hover:scale-110 transition-transform duration-300">
+              <span class="text-xl font-bold text-white">1</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+              data-i18n="steps_step1_title">Выберите услугу</h3>
+            <p class="text-slate-500 text-sm leading-relaxed" data-i18n="steps_step1_text">Перейдите в каталог и
+              выберите нужное исследование</p>
+          </div>
+
+          <!-- Шаг 2 -->
+          <div
+            class="group bg-white rounded-3xl p-8 shadow-lg shadow-slate-100 border border-slate-100 hover:shadow-xl hover:shadow-blue-100/50 hover:-translate-y-1 transition-all duration-300 relative z-10 text-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200/50 group-hover:scale-110 transition-transform duration-300">
+              <span class="text-xl font-bold text-white">2</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+              data-i18n="steps_step2_title">Заполните анкету</h3>
+            <p class="text-slate-500 text-sm leading-relaxed" data-i18n="steps_step2_text">Укажите данные и загрузите
+              материалы через облако</p>
+          </div>
+
+          <!-- Шаг 3 -->
+          <div
+            class="group bg-white rounded-3xl p-8 shadow-lg shadow-slate-100 border border-slate-100 hover:shadow-xl hover:shadow-blue-100/50 hover:-translate-y-1 transition-all duration-300 relative z-10 text-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200/50 group-hover:scale-110 transition-transform duration-300">
+              <span class="text-xl font-bold text-white">3</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+              data-i18n="steps_step3_title">Оплатите услугу</h3>
+            <p class="text-slate-500 text-sm leading-relaxed" data-i18n="steps_step3_text">Безопасная онлайн-оплата</p>
+          </div>
+
+          <!-- Шаг 4 -->
+          <div
+            class="group bg-white rounded-3xl p-8 shadow-lg shadow-slate-100 border border-slate-100 hover:shadow-xl hover:shadow-blue-100/50 hover:-translate-y-1 transition-all duration-300 relative z-10 text-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-200/50 group-hover:scale-110 transition-transform duration-300">
+              <span class="text-xl font-bold text-white">4</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors"
+              data-i18n="steps_step4_title">Получите результат</h3>
+            <p class="text-slate-500 text-sm leading-relaxed" data-i18n="steps_step4_text">Готовое заключение поступит
+              на вашу почту в согласованные сроки</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║              ФОРМА ЗАЯВКИ НА ИССЛЕДОВАНИЕ                           ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+    -->
+    <section class="py-24 bg-slate-50">
+      <div class="container mx-auto px-4">
+
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-900 mb-4" data-i18n="form_title">Оставить заявку на исследование</h2>
+          <p class="text-lg text-slate-500" data-i18n="form_subtitle">Заполните форму ниже и прикрепите снимки. Мы
+            свяжемся с вами в ближайшее
+            время.</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-slate-100">
+
+            <script data-b24-form="inline/2/d33cwc" data-skip-moving="true">
+              (function (w, d, u) {
+                var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 180000 | 0);
+                var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+              })(window, document, 'https://cdn-ru.bitrix24.ru/b36446358/crm/form/loader_2.js');
+            </script>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║                     ADVANTAGES (ПРЕИМУЩЕСТВА)                        ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Темный блок с ключевыми преимуществами центра.
+      Выделяется на фоне остального контента для привлечения внимания.
+      
+      РЕДАКТИРОВАНИЕ:
+      - Измените иконки (data-lucide="icon-name")
+      - Измените заголовки и описания
+      - Добавьте/удалите карточки преимуществ
+    -->
+    <section id="advantages" class="py-24 bg-blue-600 overflow-hidden relative">
+      <!-- Декоративные блики на фоне -->
+      <div class="absolute top-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-500 rounded-full blur-3xl opacity-50">
+      </div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] bg-blue-700 rounded-full blur-3xl opacity-50">
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Заголовок секции -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4" data-i18n="advantages_title">Почему выбирают
+            нас</h2>
+          <p class="text-lg text-blue-100 max-w-2xl mx-auto" data-i18n="advantages_subtitle">Мы объединяем лучшие
+            медицинские практики с передовыми IT-решениями</p>
+        </div>
+
+        <!-- Сетка преимуществ (4 колонки) -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Преимущество 1: Конфиденциальность -->
+          <div class="bg-white/15 border border-white/20 p-8 rounded-[2rem] hover:bg-white/25 transition-all group">
+            <div
+              class="bg-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg group-hover:rotate-12 transition-transform">
+              <i data-lucide="search" class="w-12 h-12 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" data-i18n="advantages_confidentiality_title">
+              Конфиденциальность</h3>
+            <p class="text-blue-50 text-sm leading-relaxed" data-i18n="advantages_confidentiality_text">Защита
+              персональных данных в соответствии с требованиями законодательства</p>
+          </div>
+
+          <!-- Преимущество 2: Доступность -->
+          <div class="bg-white/15 border border-white/20 p-8 rounded-[2rem] hover:bg-white/25 transition-all group">
+            <div
+              class="bg-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg group-hover:rotate-12 transition-transform">
+              <i data-lucide="heart" class="w-12 h-12 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" data-i18n="advantages_accessibility_title">Доступность</h3>
+            <p class="text-blue-50 text-sm leading-relaxed" data-i18n="advantages_accessibility_text">Запрос второго
+              мнения по ранее пройденному исследованию из любой точки мира.</p>
+          </div>
+
+          <!-- Преимущество 3: Оперативность -->
+          <div class="bg-white/15 border border-white/20 p-8 rounded-[2rem] hover:bg-white/25 transition-all group">
+            <div
+              class="bg-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg group-hover:rotate-12 transition-transform">
+              <i data-lucide="clock" class="w-12 h-12 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" data-i18n="advantages_speed_title">Оперативность</h3>
+            <p class="text-blue-50 text-sm leading-relaxed" data-i18n="advantages_speed_text">Возможность получения
+              результата в течение 3-х часов</p>
+          </div>
+
+          <!-- Преимущество 4: Компетентность -->
+          <div class="bg-white/15 border border-white/20 p-8 rounded-[2rem] hover:bg-white/25 transition-all group">
+            <div
+              class="bg-white rounded-2xl w-16 h-16 flex items-center justify-center mb-6 shadow-lg group-hover:rotate-12 transition-transform">
+              <i data-lucide="search" class="w-12 h-12 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" data-i18n="advantages_competence_title">Компетентность</h3>
+            <p class="text-blue-50 text-sm leading-relaxed" data-i18n="advantages_competence_text">Расшифровка
+              диагностического исследования профильным специалистом.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║                         TEAM (КОМАНДА)                               ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Раздел с карточками врачей-специалистов.
+      Карточки генерируются ДИНАМИЧЕСКИ через JavaScript из массива DOCTORS.
+      
+      КАК РЕДАКТИРОВАТЬ:
+      Пролистайте вниз до секции <script> и найдите массив:
+      const DOCTORS = [...]
+      
+      Там можно изменить:
+      - ФИО врачей
+      - Должности
+      - Специализации
+      - Образование
+      - Сертификаты
+      
+      !!!!!ССЫЛКА - ФОТОГРАФИИ ВРАЧЕЙ - ГЕНЕРИРУЮТСЯ ИЗ PICSUM.PHOTOS (см. JS)
+    -->
+    <section id="team" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Заголовок секции -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4" data-i18n="nav_team">Наши специалисты
+          </h2>
+          <p class="text-lg text-slate-500 max-w-2xl mx-auto" data-i18n="team_subtitle">Команда профессионалов с
+            глубокой специализацией в различных модальностях лучевой диагностики.</p>
+        </div>
+
+        <!-- 
+          КОНТЕЙНЕР ДЛЯ КАРТОЧЕК ВРАЧЕЙ
+          Карточки генерируются через JavaScript (см. секцию SCRIPTS).
+          ID "teamGrid" используется для вставки HTML.
+        -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" id="teamGrid"></div>
+
+        <!-- Кнопка «Показать всех врачей» — ведёт на отдельную страницу -->
+        <div class="flex justify-center mt-10">
+          <a href="doctors.html"
+            class="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all"
+            data-i18n="team_show_all">Показать всех врачей
+            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!--
+      ╔══════════════════════════════════════════════════════════════════════╗
+      ║                      PARTNERS (СОТРУДНИЧЕСТВО)                       ║
+      ╚══════════════════════════════════════════════════════════════════════╝
+      
+      НАЗНАЧЕНИЕ:
+      Информация для потенциальных партнеров: клиник, врачей,
+      региональных организаций.
+      
+      РЕДАКТИРОВАНИЕ:
+      - Измените тексты в карточках
+      - Измените списки преимуществ
+      - Добавьте действие для кнопки "Связаться с нами"
+      
+      !!!!!ССЫЛКА - КНОПКА - СВЯЗАТЬСЯ С НАМИ (СОТРУДНИЧЕСТВО)
+    -->
+    <section id="partners" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Заголовок секции -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4" data-i18n="nav_partners">Сотрудничество
+          </h2>
+          <p class="text-lg text-slate-500 max-w-2xl mx-auto" data-i18n="partners_subtitle">Мы открыты для партнерства
+            с медицинскими организациями</p>
+        </div>
+
+        <!-- Сетка карточек партнеров (3 колонки) -->
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+
+          <!-- Карточка 1: Медицинские организации -->
+          <div
+            class="p-8 border border-slate-100 rounded-[2.5rem] bg-slate-50/50 hover:bg-white transition-all hover:shadow-2xl hover:shadow-blue-50">
+            <div
+              class="bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-50">
+              <i data-lucide="hospital" class="w-10 h-10 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4" data-i18n="partners_clinics_title">Медицинские
+              организации</h3>
+            <p class="text-slate-600 text-sm mb-8 leading-relaxed" data-i18n="partners_clinics_text">Предлагаем услуги
+              телерентгенологии для клиник, диагностических центров и больниц</p>
+            <ul class="space-y-3">
+              <li class="flex items-center text-sm font-medium text-slate-700">
+                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div><span
+                  data-i18n="partners_clinics_item_3">Второе мнение</span>
+              </li>
+              <li class="flex items-center text-sm font-medium text-slate-700">
+                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div><span
+                  data-i18n="partners_clinics_item_1">Стандартизированный протокол</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Карточка 2: Врачи-рентгенологи -->
+          <div
+            class="p-8 border border-slate-100 rounded-[2.5rem] bg-slate-50/50 hover:bg-white transition-all hover:shadow-2xl hover:shadow-blue-50">
+            <div
+              class="bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-50">
+              <i data-lucide="search" class="w-10 h-10 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4" data-i18n="partners_doctors_title">Врачи-рентгенологи
+            </h3>
+            <p class="text-slate-600 text-sm mb-8 leading-relaxed" data-i18n="partners_doctors_text">Приглашаем к
+              сотрудничеству опытных врачей-рентгенологов для выполнения описания исследований</p>
+            <ul class="space-y-3">
+              <li class="flex items-center text-sm font-medium text-slate-700">
+                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div><span
+                  data-i18n="partners_doctors_item_2">Гибкий график</span>
+              </li>
+              <li class="flex items-center text-sm font-medium text-slate-700">
+                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div><span
+                  data-i18n="partners_doctors_item_3">Достойная оплата труда</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Карточка 3: Межрегиональное сотрудничество -->
+          <div
+            class="p-8 border border-slate-100 rounded-[2.5rem] bg-slate-50/50 hover:bg-white transition-all hover:shadow-2xl hover:shadow-blue-50">
+            <div
+              class="bg-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-sm mb-6 border border-slate-50">
+              <i data-lucide="handshake" class="w-10 h-10 text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4" data-i18n="partners_regional_title">Межрегиональное
+              сотрудничество</h3>
+            <p class="text-slate-600 text-sm mb-8 leading-relaxed" data-i18n="partners_regional_text">Опыт
+              сотрудничества с государственными и частными партнерами, персонализированный подход</p>
+            <ul class="space-y-3">
+              <li class="flex items-center text-sm font-medium text-slate-700">
+                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div><span
+                  data-i18n="partners_regional_item_1">Совместная разработка проекта</span>
+              </li>
+              <li class="flex items-center text-sm font-medium text-slate-700">
+                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div><span
+                  data-i18n="partners_regional_item_2">Персональный менеджер</span>
+              </li>
+              <li class="flex items-center text-sm font-medium text-slate-700">
+                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div><span
+                  data-i18n="partners_regional_item_4">Консультативная помощь на техническом этапе</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA блок (призыв к действию) -->
+        <div
+          class="bg-gradient-to-r from-blue-600 to-indigo-600 p-10 sm:p-16 rounded-[3rem] text-center shadow-2xl shadow-slate-200/50">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white mb-6" data-i18n="partners_cta_title">Готовы стать нашим
+            партнером?</h3>
+          <p class="text-blue-100 mb-10 max-w-xl mx-auto text-lg" data-i18n="partners_cta_text">Оставьте заявку, и наш
+            менеджер свяжется с вами для обсуждения условий сотрудничества</p>
+          <!-- !!!!!ССЫЛКА - КНОПКА - СВЯЗАТЬСЯ С НАМИ -->
+          <button
+            class="bg-white text-blue-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl"
+            type="button" data-i18n="partners_cta_btn">Связаться с нами</button>
+        </div>
+      </div>
+  </main>
+
+  <!-- Карта -->
+  <section class="bg-white pt-0 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-[28px] overflow-hidden shadow-2xl border border-white/70 bg-white">
+        <div
+          class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-lg rounded-2xl shadow-lg border border-slate-100 p-4 w-72">
+          <p class="text-xs uppercase tracking-wide text-blue-600 font-semibold mb-1" data-i18n="map_address_label">Наш
+            адрес</p>
+          <p class="text-sm text-slate-800 mb-3 leading-relaxed" data-i18n="map_address">420064, Казань, Оренбургский
+            тракт, 138 к.2</p>
+          <div class="space-y-1 mb-3">
+            <div class="flex items-center text-sm text-slate-700"><i data-lucide="phone"
+                class="w-4 h-4 mr-2 text-blue-600"></i><a href="tel:+78432229016" class="hover:text-blue-600">+7 (843)
+                222-90-16</a></div>
+            <div class="flex items-center text-sm text-slate-700"><i data-lucide="phone"
+                class="w-4 h-4 mr-2 text-blue-600"></i><a href="tel:+78432229017" class="hover:text-blue-600">+7 (843)
+                222-90-17</a></div>
+          </div>
+          <a href="https://yandex.ru/maps/-/CDubS6-m" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold text-sm shadow-md hover:bg-blue-700 transition-colors">
+            <span data-i18n="map_route_btn">Построить маршрут</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+
+        <div class="relative h-[420px] sm:h-[480px] lg:h-[540px]">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A649ddd3f9c1f769d1359e1579d9ab3d012bf5caf1462c7ee2bfe297f5931ab71&width=100%25&height=100%25&lang=ru_RU&scroll=false">
+            </script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║                        FOOTER (ПОДВАЛ САЙТА)                         ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+    
+    НАЗНАЧЕНИЕ:
+    Подвал сайта с контактной информацией, навигацией и юридическими данными.
+    
+    ВАЖНО ЗАМЕНИТЬ:
+    - Телефон
+    - Email
+    - Адрес
+    - Юридическую информацию
+    - Ссылки на социальные сети
+    
+    !!!!!ССЫЛКА - КОНТАКТНЫЕ ДАННЫЕ - ЗАМЕНИТЕ НА РЕАЛЬНЫЕ
+    !!!!!ССЫЛКА - ССЫЛКИ НА СОЦСЕТИ - ЗАМЕНИТЕ НА РЕАЛЬНЫЕ
+    !!!!!ССЫЛКА - ВНЕШНИЕ ССЫЛКИ НА САЙТЫ ОРГАНИЗАЦИЙ
+  -->
+  <footer class="bg-slate-900 text-white pt-24 pb-12 overflow-hidden relative">
+    <!-- Декоративный блик -->
+    <div
+      class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+        <!-- Колонка 1: Логотип и описание -->
+        <div class="space-y-6">
+          <div class="flex items-center space-x-3">
+            <!-- !!!!!ССЫЛКА - ЛОГОТИП В ФУТЕРЕ -->
+            <img src="./images/logo-new.png" alt="RdC Logo" class="w-12 h-12" />
+            <div class="flex flex-col">
+              <span class="text-lg font-extrabold tracking-tight leading-none"
+                data-i18n="hero_title_full">Радиологический дата-центр</span>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">+7 (843) 222-90-16<br>
+            +7 (843) 222-90-17</p>
+        </div>
+
+        <!-- Колонка 2: Навигация -->
+        <div>
+          <h4 class="font-bold mb-6 uppercase tracking-wider text-xs text-blue-500" data-i18n="footer_nav">Навигация
+          </h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <li><a href="#about" class="hover:text-white transition-colors" data-i18n="hero_btn_about">О центре</a>
+            </li>
+            <li><a href="#services" class="hover:text-white transition-colors" data-i18n="nav_services">Услуги</a></li>
+            <li><a href="#team" class="hover:text-white transition-colors" data-i18n="nav_team">Наши специалисты</a>
+            </li>
+            <li><a href="#partners" class="hover:text-white transition-colors"
+                data-i18n="nav_partners">Сотрудничество</a></li>
+          </ul>
+        </div>
+        <!-- 
+          Колонка 3: Контакты
+          !!!!!ССЫЛКА - ТЕЛЕФОН - ЗАМЕНИТЕ НА РЕАЛЬНЫЙ
+          !!!!!ССЫЛКА - EMAIL - ЗАМЕНИТЕ НА РЕАЛЬНЫЙ
+          !!!!!ССЫЛКА - АДРЕС - ЗАМЕНИТЕ НА РЕАЛЬНЫЙ
+        -->
+        <div>
+          <h4 class="font-bold mb-6 uppercase tracking-wider text-xs text-blue-500" data-i18n="nav_contacts">Контакты
+          </h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <!-- !!!!!ССЫЛКА - EMAIL -->
+            <li class="flex items-center space-x-3"><i data-lucide="mail"
+                class="w-4 h-4 text-blue-500"></i><span>rdc.rt@tatar.ru</span></li>
+            <!-- !!!!!ССЫЛКА - АДРЕС -->
+            <li class="flex items-center space-x-3"><i data-lucide="map-pin" class="w-4 h-4 text-blue-500"></i><span
+                data-i18n="page_contact_address">420064, г. Казань, ул. Оренбургский тракт, д. 138 к.2</span>
+            </li>
+          </ul>
+
+          <!-- Документы -->
+          <h4 class="font-bold mt-8 mb-4 uppercase tracking-wider text-xs text-blue-500" data-i18n="footer_documents">
+            Документы</h4>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex items-center space-x-3">
+              <i data-lucide="file-text" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+              <a href="./documents/reestr_license.pdf" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition-colors" data-i18n="footer_doc_license">Выписка из реестра
+                лицензий</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i data-lucide="file-text" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+              <a href="./documents/prikaz_create.pdf" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition-colors" data-i18n="footer_doc_order">Приказ о создании
+                РДЦ</a>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i data-lucide="file-text" class="w-4 h-4 text-blue-500 flex-shrink-0"></i>
+              <a href="./documents/ustav.pdf" target="_blank" rel="noopener noreferrer"
+                class="hover:text-white transition-colors" data-i18n="footer_doc_charter">Устав</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 
+          Колонка 4: Юридическая информация
+          !!!!!ССЫЛКА - ВНЕШНЯЯ ССЫЛКА - САЙТ ДЦ МЗ РТ
+          !!!!!ССЫЛКА - ВНЕШНЯЯ ССЫЛКА - САЙТ МИНЗДРАВА РТ
+        -->
+        <div>
+          <h4 class="font-bold mb-6 uppercase tracking-wider text-xs text-blue-500" data-i18n="footer_legal">Юридическая
+            информация</h4>
+          <div class="text-xs text-slate-400 leading-relaxed space-y-3">
+            <p class="text-slate-300 font-medium" data-i18n="about_legal_name">Государственное автономное учреждение
+              Республики Татарстан «Диспетчерский центр Министерства здравоохранения Республики Татарстан» (ДЦ МЗ РТ)
+            </p>
+            <p class="text-slate-500" data-i18n="about_address_main">Адрес: 420073, г. Казань, ул. Аделя Кутуя, д. 88.
+              Прием граждан по личным вопросам осуществляется по понедельникам, записаться на прием можно позвонив на
+              номер 8 (843) 221-16-90</p>
+
+            <p class="text-slate-300 font-medium mt-4" data-i18n="about_rdc_name">Обособленное структурное подразделение
+              ДЦ МЗ РТ «Радиологический дата-центр»</p>
+            <p class="text-slate-500" data-i18n="about_address_rdc">Адрес: 420064, г. Казань, ул. Оренбургский тракт, д.
+              138 к.2</p>
+
+            <div class="mt-4 pt-4 border-t border-slate-700">
+              <p class="text-slate-500 mb-2" data-i18n="footer_official">Официальный сайт ДЦ МЗ РТ:</p>
+              <!-- !!!!!ССЫЛКА - ВНЕШНЯЯ - DCMZ.TATARSTAN.RU -->
+              <a href="https://dcmz.tatarstan.ru/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 text-sm font-bold text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+                <span>dcmz.tatarstan.ru</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-700">
+              <p class="text-slate-300 font-medium mb-2" data-i18n="footer_minzdrav">Министерство здравоохранения
+                Республики Татарстан</p>
+              <!-- !!!!!ССЫЛКА - ВНЕШНЯЯ - MINZDRAV.TATARSTAN.RU -->
+              <a href="https://minzdrav.tatarstan.ru/" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 text-sm font-bold text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="globe" class="w-4 h-4"></i>
+                <span>minzdrav.tatarstan.ru</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 
+        Нижняя строка футера
+        !!!!!ССЫЛКА - СОЦСЕТИ - TELEGRAM/YOUTUBE - ЗАМЕНИТЕ НА РЕАЛЬНЫЕ
+      -->
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <!-- Год обновляется автоматически через JavaScript -->
+        <p class="text-slate-500 text-xs">© <span id="currentYear">2026</span> <span data-i18n="footer_copyright">ДЦ МЗ
+            РТ. Все права защищены.</span>
+        </p>
+        <div class="flex space-x-6 text-slate-500 text-xs">
+          <!-- !!!!!ССЫЛКА - VKONTAKTE -->
+          <a href="#" class="hover:text-white">Vkontakte</a>
+          <!-- !!!!!ССЫЛКА - MAX -->
+          <a href="#" class="hover:text-white">Max</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!--
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║                      JAVASCRIPT (ИНТЕРАКТИВ)                         ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+    
+    СОДЕРЖАНИЕ:
+    1. Инициализация иконок Lucide
+    2. Автоподстановка текущего года в футере
+    3. Поведение шапки при прокрутке (фон/тень)
+    4. Мобильное меню (открытие/закрытие)
+    5. Данные врачей (массив DOCTORS)
+    6. Генерация карточек врачей
+    7. Логика модального окна врача
+    
+    КАК РЕДАКТИРОВАТЬ ДАННЫЕ ВРАЧЕЙ:
+    Найдите массив const DOCTORS = [...] и измените:
+    - name: ФИО
+    - position: должность
+    - specialization: специализация
+    - education: массив строк с образованием
+    - certificates: массив строк с сертификатами
+    
+    !!!!!ССЫЛКА - ФОТО ВРАЧЕЙ - ГЕНЕРИРУЮТСЯ ИЗ picsum.photos (см. fillDoctor)
+  -->
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    МОДУЛЬНЫЕ JS-ФАЙЛЫ (закомментированы)
+    ═══════════════════════════════════════════════════════════════════════
+    Эти файлы содержат модульную версию JavaScript кода.
+    В продакшене можно использовать bundler (Webpack, Vite) для объединения.
+    
+    Сейчас весь JS находится выше в теге <script> для простоты.
+    Раскомментируйте строки ниже, если хотите использовать модульную структуру.
+    
+    !!!!!ССЫЛКА - ЛОКАЛЬНЫЕ JS ФАЙЛЫ
+  -->
+  <!-- MODULAR JS FILES -->
+  <!-- Loaded with defer to not block HTML parsing, executed in order -->
+  <script defer src="js/data/doctors.js"></script>
+  <script defer src="js/data/services.js"></script>
+  <script defer src="js/modules/utils.js"></script>
+  <script defer src="js/modules/header.js"></script>
+  <script defer src="js/modules/team.js"></script>
+  <script defer src="js/main.js"></script>
+
+  <!-- 
+    ═══════════════════════════════════════════════════════════════════════
+    СИСТЕМА ИНТЕРНАЦИОНАЛИЗАЦИИ (i18n)
+    ═══════════════════════════════════════════════════════════════════════
+    Переводы интерфейса на русский и татарский языки.
+  -->
+  <script defer src="js/i18n/translations.js"></script>
+  <script>
+    (function (w, d, u) {
+      var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+      var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+    })(window, document, 'https://cdn-ru.bitrix24.ru/b36446358/crm/site_button/loader_2_czes1k.js');
+  </script>
+
+  <div id="cookie-banner" class="cookie-container">
+    <div class="cookie-content">
+      <p class="cookie-text" data-i18n="cookie_text">
+        Мы используем файлы cookie для улучшения работы сайта.
+      </p>
+      <button id="accept-cookies" class="btn btn-primary" data-i18n="cookie_accept">Принять</button>
+    </div>
+  </div>
+  <script defer src="js/cookie-consent.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--
+  ╔══════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                              ║
+  ║   РДЦ — ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ                                              ║
+  ║   Высококонтрастная версия сайта с крупным шрифтом                           ║
+  ║                                                                              ║
+  ║   ОСОБЕННОСТИ:                                                               ║
+  ║   - Чёрно-белая цветовая схема с высоким контрастом                          ║
+  ║   - Крупный размер шрифта (18-24px для основного текста)                     ║
+  ║   - Отсутствие анимаций, blur-эффектов и градиентов                          ║
+  ║   - Простая структура без декоративных элементов                             ║
+  ║   - Увеличенные интерактивные области (кнопки, ссылки)                       ║
+  ║   - Чёткие границы и разделители                                             ║
+  ║                                                                              ║
+  ╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Альтернативные языковые версии для SEO -->
+  <link rel="alternate" hreflang="ru" href="https://rdc-rt.ru/accessible.html" />
+  <link rel="alternate" hreflang="en" href="https://rdc-rt.ru/accessible-en.html" />
+  <link rel="alternate" hreflang="tt" href="https://rdc-rt.ru/accessible-tt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://rdc-rt.ru/accessible.html" />
+  <title>РДЦ — Радиологический дата-центр | Версия для слабовидящих</title>
+
+  <meta name="description"
+    content="Радиологический дата-центр (РДЦ) — первый региональный центр телерентгенологии в Республике Татарстан. Версия для слабовидящих.">
+
+  <!-- Google Fonts - шрифт с хорошей читаемостью -->
+  <!-- Локальный шрифт Inter -->
+  <link rel="stylesheet" href="fonts/inter.css">
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════════════════
+       БАЗОВЫЕ СТИЛИ ДЛЯ СЛАБОВИДЯЩИХ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Отключаем все анимации */
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    html {
+      font-size: 20px;
+      /* Базовый размер шрифта увеличен */
+      scroll-behavior: auto;
+      /* Отключаем плавный скролл */
+    }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       ССЫЛКИ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    a {
+      color: #000000;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 2px;
+    }
+
+    a:hover,
+    a:focus {
+      background-color: #000000;
+      color: #ffffff;
+      outline: 3px solid #000000;
+      outline-offset: 2px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       ШАПКА
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .header {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 1.5rem 2rem;
+      border-bottom: 4px solid #000000;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .logo:hover,
+    .logo:focus {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .logo-subtitle {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 3px solid currentColor;
+      cursor: pointer;
+    }
+
+    .btn-light {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .btn-light:hover,
+    .btn-light:focus {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    /* Навигация */
+    .nav {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #ffffff;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+    }
+
+    .nav-link {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 0.5rem;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       ОСНОВНОЙ КОНТЕНТ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 3px solid #000000;
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 4px solid #000000;
+      display: inline-block;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #333333;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       HERO СЕКЦИЯ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .hero {
+      background-color: #f5f5f5;
+      padding: 3rem 2rem;
+      margin: -2rem -2rem 2rem -2rem;
+      border-bottom: 4px solid #000000;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .hero-description {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #000000;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: #000000;
+      border-color: #000000;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       МЕТРИКИ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric {
+      padding: 1.5rem;
+      border: 3px solid #000000;
+      text-align: center;
+    }
+
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       КАРТОЧКИ УСЛУГ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+      border: 3px solid #000000;
+    }
+
+    .service-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #000000;
+    }
+
+    .service-description {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       ШАГИ ПРОЦЕССА
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      counter-reset: step-counter;
+    }
+
+    .step-card {
+      padding: 1.5rem;
+      border: 3px solid #000000;
+      text-align: center;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: 3px solid #000000;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .step-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-text {
+      font-size: 1rem;
+      color: #333333;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       СПИСОК ПРЕИМУЩЕСТВ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .advantages-list {
+      list-style: none;
+    }
+
+    .advantages-list li {
+      padding: 1rem 0;
+      border-bottom: 2px solid #cccccc;
+      font-size: 1.1rem;
+    }
+
+    .advantages-list li:last-child {
+      border-bottom: none;
+    }
+
+    .advantages-list strong {
+      display: block;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       КОНТАКТЫ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      padding: 1.5rem;
+      border: 3px solid #000000;
+    }
+
+    .contact-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .contact-value {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .contact-value a {
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       ФУТЕР
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .footer {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      margin-bottom: 2rem;
+    }
+
+    .footer-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .footer p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .footer a {
+      color: #ffffff;
+    }
+
+    .footer a:hover,
+    .footer a:focus {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #ffffff;
+      font-size: 0.9rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       ПЕРЕКЛЮЧАТЕЛЬ РАЗМЕРА ШРИФТА
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    .font-controls {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .font-controls span {
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .font-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .font-btn:hover,
+    .font-btn:focus {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       АДАПТИВНОСТЬ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 18px;
+      }
+
+      .header {
+        padding: 1rem;
+      }
+
+      .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .font-controls {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
+
+      .hero {
+        padding: 1.5rem 1rem;
+        margin: -1.5rem -1rem 1.5rem -1rem;
+      }
+
+      .hero-title {
+        font-size: 1.6rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .main {
+        padding: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .section-subtitle {
+        font-size: 1rem;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 0.75rem;
+        border: 2px solid #ffffff;
+        text-align: center;
+      }
+
+      /* Метрики на мобильном */
+      .metrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .metric {
+        padding: 1rem;
+      }
+
+      .metric-value {
+        font-size: 1.8rem;
+      }
+
+      .metric-label {
+        font-size: 0.8rem;
+      }
+
+      /* Услуги на мобильном */
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .service-card {
+        padding: 1rem;
+      }
+
+      .service-title {
+        font-size: 1.1rem;
+      }
+
+      .service-description {
+        font-size: 1rem;
+      }
+
+      /* Шаги на мобильном */
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .step-card {
+        padding: 1rem;
+      }
+
+      .step-title {
+        font-size: 1.1rem;
+      }
+
+      .step-text {
+        font-size: 0.95rem;
+      }
+
+      /* Контакты на мобильном */
+      .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .contact-item {
+        padding: 1rem;
+      }
+
+      .contact-value {
+        font-size: 1.1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      /* Преимущества */
+      .advantages-list li {
+        font-size: 1rem;
+      }
+
+      .advantages-list strong {
+        font-size: 1.1rem;
+      }
+
+      /* Футер на мобильном */
+      .footer {
+        padding: 1.5rem 1rem;
+      }
+
+      .footer p {
+        font-size: 0.9rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .footer-title {
+        font-size: 1rem;
+      }
+    }
+
+    /* Ещё меньше экран (до 480px) */
+    @media (max-width: 480px) {
+      html {
+        font-size: 16px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 1.4rem;
+      }
+
+      .section-title {
+        font-size: 1.2rem;
+      }
+
+      .logo-text {
+        font-size: 1.2rem;
+      }
+
+      .logo-subtitle {
+        font-size: 0.7rem;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       РЕЖИМЫ УВЕЛИЧЕННОГО ШРИФТА
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    /* Режим увеличенного шрифта - LARGE */
+    html.font-large {
+      font-size: 24px;
+    }
+
+    html.font-large .hero-title {
+      font-size: 2rem;
+    }
+
+    html.font-large .section-title {
+      font-size: 1.6rem;
+    }
+
+    html.font-large .metric-value {
+      font-size: 2rem;
+    }
+
+    /* Режим увеличенного шрифта - XLARGE */
+    html.font-xlarge {
+      font-size: 28px;
+    }
+
+    html.font-xlarge .hero-title {
+      font-size: 1.8rem;
+    }
+
+    html.font-xlarge .section-title {
+      font-size: 1.5rem;
+    }
+
+    html.font-xlarge .metric-value {
+      font-size: 1.8rem;
+    }
+
+    html.font-xlarge .service-title {
+      font-size: 1.1rem;
+    }
+
+    html.font-xlarge .contact-value {
+      font-size: 1.1rem;
+    }
+
+    /* LARGE + мобильный */
+    @media (max-width: 768px) {
+      html.font-large {
+        font-size: 20px;
+      }
+
+      html.font-large .hero-title {
+        font-size: 1.5rem;
+      }
+
+      html.font-large .section-title {
+        font-size: 1.3rem;
+      }
+
+      html.font-large .metric-value {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* XLARGE + мобильный */
+    @media (max-width: 768px) {
+      html.font-xlarge {
+        font-size: 22px;
+      }
+
+      html.font-xlarge .hero-title {
+        font-size: 1.4rem;
+      }
+
+      html.font-xlarge .section-title {
+        font-size: 1.2rem;
+      }
+
+      html.font-xlarge .metric-value {
+        font-size: 1.5rem;
+      }
+
+      html.font-xlarge .service-title {
+        font-size: 1rem;
+      }
+    }
+
+    /* XLARGE + очень маленький экран */
+    @media (max-width: 480px) {
+      html.font-large {
+        font-size: 18px;
+      }
+
+      html.font-xlarge {
+        font-size: 20px;
+      }
+
+      html.font-xlarge .hero-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       ЗАЩИТА ОТ ПЕРЕПОЛНЕНИЯ
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    * {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .header-content,
+    .main,
+    .footer-content {
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       ШАПКА
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-content">
+      <div class="header-top">
+        <a href="accessible.html" class="logo">
+          <div>
+            <div class="logo-text">РДЦ</div>
+            <div class="logo-subtitle">Дата-центр</div>
+          </div>
+        </a>
+
+        <div class="header-actions">
+          <!-- Переключатель размера шрифта -->
+          <div class="font-controls">
+            <span data-i18n="accessible_font">Шрифт:</span>
+            <button class="font-btn" onclick="setFontSize('normal')" title="Обычный размер"
+              data-i18n-title="accessible_font_normal">A</button>
+            <button class="font-btn" onclick="setFontSize('large')" title="Крупный размер"
+              data-i18n-title="accessible_font_large" style="font-size: 1.2rem;">A</button>
+            <button class="font-btn" onclick="setFontSize('xlarge')" title="Очень крупный размер"
+              data-i18n-title="accessible_font_xlarge" style="font-size: 1.4rem;">A</button>
+          </div>
+
+          <!-- Переключатель языка -->
+          <button data-lang-switch class="btn btn-light" type="button" title="Переключить язык"
+            aria-label="Переключить язык" style="min-width: auto; padding: 0.5rem 1rem;">
+            <span data-i18n="lang_short">ТАТ</span>
+          </button>
+
+          <a href="index.html" class="btn btn-light" data-i18n="accessible_normal_version">Обычная версия</a>
+        </div>
+      </div>
+
+      <!-- Навигация -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">О нас</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_services">Услуги</a></li>
+          <li><a href="#advantages" class="nav-link" data-i18n="nav_advantages">Преимущества</a></li>
+          <li><a href="#contacts" class="nav-link" data-i18n="nav_contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HERO СЕКЦИЯ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="hero">
+      <h1 class="hero-title" data-i18n="hero_title_full">Радиологический дата-центр</h1>
+      <p class="hero-description" data-i18n="hero_description">Профессиональное дистанционное описание медицинских
+        диагностических изображений. Второе мнение от ведущих врачей-экспертов-рентгенологов. Быстрое получение
+        результатов онлайн с гарантией качества и конфиденциальности.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary" data-i18n="hero_btn_services">Выбрать услугу</a>
+        <a href="#contacts" class="btn btn-secondary" data-i18n="partners_cta_btn">Связаться с нами</a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         МЕТРИКИ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="metrics">
+        <div class="metric">
+          <span class="metric-value">2022</span>
+          <span class="metric-label" data-i18n="metrics_year">Год начала работы</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">100к+</span>
+          <span class="metric-label" data-i18n="metrics_research">Исследований в год</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">3+</span>
+          <span class="metric-label" data-i18n="metrics_ai">ИИ-сервиса в работе</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">24/7</span>
+          <span class="metric-label" data-i18n="metrics_availability">Доступность сервиса</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         О НАС
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" id="about">
+      <h2 class="section-title" data-i18n="about_title_full">О центре телерентгенологии</h2>
+      <p class="section-subtitle" data-i18n="about_text_1">РДЦ — первый региональный медицинский центр телерентгенологии
+        в Республике Татарстан, объединяющий команду опытных врачей-рентгенологов и профильных врачей-экспертов. Большой
+        опыт сотрудничества с медицинскими организациями по расшифровке медицинских изображений обеспечивает доверие к
+        нашей работе и уверенность в результате.</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         УСЛУГИ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" id="services">
+      <h2 class="section-title" data-i18n="services_title">Наши услуги</h2>
+      <p class="section-subtitle" data-i18n="services_subtitle">Описание и интерпретация проведенных исследований по
+        следующим видам диагностики</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title" data-i18n="services_mri_title">МРТ</h3>
+          <p class="service-description" data-i18n="services_mri_desc">Высокоточная диагностика мягких тканей, сосудов и
+            внутренних органов без облучения.</p>
+          <p><strong data-i18n="page_services_turnaround">Срок:</strong> 3-24 часа</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title" data-i18n="services_ct_title">КТ</h3>
+          <p class="service-description" data-i18n="services_ct_desc">Детальное исследование костных структур и полых
+            органов с помощью рентгеновского излучения.</p>
+          <p><strong data-i18n="page_services_turnaround">Срок:</strong> 2-12 часов</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title" data-i18n="services_xray_title">Рентген</h3>
+          <p class="service-description" data-i18n="services_xray_desc">Классическая и цифровая рентгенография для
+            быстрой оценки состояния костей и легких.</p>
+          <p><strong data-i18n="page_services_turnaround">Срок:</strong> 1-6 часов</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title" data-i18n="services_mammography_title">Маммография</h3>
+          <p class="service-description" data-i18n="services_mammography_desc">Профилактическое исследование молочных
+            желез для раннего выявления новообразований.</p>
+          <p><strong data-i18n="page_services_turnaround">Срок:</strong> 3-12 часов</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title" data-i18n="services_fluoro_title">Флюорография</h3>
+          <p class="service-description" data-i18n="services_fluoro_desc">Массовое скрининговое обследование органов
+            грудной клетки с минимальной дозой облучения.</p>
+          <p><strong data-i18n="page_services_turnaround">Срок:</strong> 1-3 часа</p>
+        </div>
+
+        <div class="service-card">
+          <h3 class="service-title" data-i18n="services_multimodal_title">Мультимодальные исследования</h3>
+          <p class="service-description" data-i18n="services_multimodal_desc">Комплексный анализ данных нескольких видов
+            диагностики для постановки сложного диагноза.</p>
+          <p><strong data-i18n="page_services_turnaround">Срок:</strong> 24-48 часов</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         КАК ЭТО РАБОТАЕТ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" id="how-it-works">
+      <h2 class="section-title" data-i18n="steps_title">Как происходит описание исследования</h2>
+      <p class="section-subtitle" data-i18n="steps_subtitle">Простой и понятный процесс получения экспертного заключения
+      </p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title" data-i18n="steps_step1_title">Выберите услугу</h3>
+          <p class="step-text" data-i18n="steps_step1_text">Перейдите в каталог и выберите нужное исследование</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title" data-i18n="steps_step2_title">Заполните анкету</h3>
+          <p class="step-text" data-i18n="steps_step2_text">Укажите данные и загрузите материалы через облако</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title" data-i18n="steps_step3_title">Оплатите услугу</h3>
+          <p class="step-text" data-i18n="steps_step3_text">Безопасная онлайн-оплата</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3 class="step-title" data-i18n="steps_step4_title">Получите результат</h3>
+          <p class="step-text" data-i18n="steps_step4_text">Готовое заключение поступит на вашу почту в согласованные
+            сроки</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         ПРЕИМУЩЕСТВА
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" id="advantages">
+      <h2 class="section-title" data-i18n="advantages_title">Почему выбирают нас</h2>
+
+      <ul class="advantages-list">
+        <li>
+          <strong data-i18n="advantages_confidentiality_title">Конфиденциальность</strong>
+          <span data-i18n="advantages_confidentiality_text">Защита персональных данных в соответствии с требованиями
+            законодательства</span>
+        </li>
+        <li>
+          <strong data-i18n="advantages_accessibility_title">Доступность</strong>
+          <span data-i18n="advantages_accessibility_text">Запрос второго мнения по ранее пройденному исследованию из
+            любой точки мира.</span>
+        </li>
+        <li>
+          <strong data-i18n="advantages_speed_title">Оперативность</strong>
+          <span data-i18n="advantages_speed_text">Возможность получения результата в течение 3-х часов</span>
+        </li>
+        <li>
+          <strong data-i18n="advantages_competence_title">Компетентность</strong>
+          <span data-i18n="advantages_competence_text">Расшифровка диагностического исследования профильным
+            специалистом.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         КОНТАКТЫ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" id="contacts">
+      <h2 class="section-title" data-i18n="nav_contacts">Контакты</h2>
+
+      <div class="contacts-grid">
+        <div class="contact-item">
+          <div class="contact-label" data-i18n="page_contact_phone">Телефон</div>
+          <div class="contact-value">
+            <a href="tel:+78001234567">8 (800) 123-45-67</a>
+          </div>
+          <p data-i18n="page_contact_phone_free">Бесплатно по России</p>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label" data-i18n="page_contact_email">Email</div>
+          <div class="contact-value">
+            <a href="mailto:info@rdc-rt.ru">info@rdc-rt.ru</a>
+          </div>
+          <p data-i18n="page_contact_email_response">Ответим в течение 24 часов</p>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label" data-i18n="page_contact_address">Адрес</div>
+          <div class="contact-value">
+            420064, г. Казань<br>
+            ул. Оренбургский тракт, д. 138 к.2
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label" data-i18n="page_about_schedule">Режим работы</div>
+          <div class="contact-value" data-i18n="page_contact_schedule_value">Круглосуточно, 24/7</div>
+          <p data-i18n="page_contact_schedule_text">Прием исследований без выходных</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       ФУТЕР
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="footer-title" data-i18n="footer_legal">Юридическая информация</h3>
+        <p data-i18n="about_legal_name">Государственное автономное учреждение Республики Татарстан «Диспетчерский центр
+          Министерства здравоохранения Республики Татарстан» (ДЦ МЗ РТ)</p>
+        <p data-i18n="about_address_main">Адрес: 420073, г. Казань, ул. Аделя Кутуя, д. 88. Прием граждан по личным
+          вопросам осуществляется по понедельникам, записаться на прием можно позвонив на номер 8 (843) 221-16-90</p>
+      </div>
+
+      <div class="footer-section">
+        <p data-i18n="about_rdc_name">Обособленное структурное подразделение ДЦ МЗ РТ «Радиологический дата-центр»</p>
+        <p data-i18n="about_address_rdc">Адрес: 420064, г. Казань, ул. Оренбургский тракт, д. 138 к.2</p>
+      </div>
+
+      <div class="footer-section">
+        <p><span data-i18n="footer_official">Официальный сайт ДЦ МЗ РТ:</span> <a href="https://dcmz.tatarstan.ru/"
+            target="_blank">dcmz.tatarstan.ru</a></p>
+        <p><span data-i18n="footer_minzdrav">Министерство здравоохранения Республики Татарстан</span> <a
+            href="https://minzdrav.tatarstan.ru/" target="_blank">minzdrav.tatarstan.ru</a></p>
+      </div>
+
+      <div class="footer-bottom">
+        <p>©2026 <span data-i18n="footer_copyright">ДЦ МЗ РТ. Все права защищены.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Обновление года в футере
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Переключение размера шрифта
+    function setFontSize(size) {
+      const html = document.documentElement;
+      html.classList.remove('font-large', 'font-xlarge');
+
+      if (size === 'large') {
+        html.classList.add('font-large');
+        localStorage.setItem('rdc_font_size', 'large');
+      } else if (size === 'xlarge') {
+        html.classList.add('font-xlarge');
+        localStorage.setItem('rdc_font_size', 'xlarge');
+      } else {
+        localStorage.setItem('rdc_font_size', 'normal');
+      }
+    }
+
+    // Восстановление размера шрифта при загрузке
+    const savedFontSize = localStorage.getItem('rdc_font_size');
+    if (savedFontSize && savedFontSize !== 'normal') {
+      setFontSize(savedFontSize);
+    }
+  </script>
+
+  <!-- СИСТЕМА ИНТЕРНАЦИОНАЛИЗАЦИИ (i18n) -->
+  <!-- <!-- <!-- <script src="js/i18n/translations.js?v=20260118"></script> --> --> -->
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--
+  ╔══════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                              ║
+  ║   РДЦ — СТРАНИЦА 404 (НЕ НАЙДЕНО)                                            ║
+  ║   Страница ошибки для несуществующих URL                                     ║
+  ║                                                                              ║
+  ║   ОПИСАНИЕ:                                                                  ║
+  ║   Эта страница показывается, когда пользователь пытается открыть             ║
+  ║   несуществующую страницу сайта. Содержит сообщение об ошибке               ║
+  ║   и ссылки для навигации.                                                    ║
+  ║                                                                              ║
+  ║   СТРУКТУРА:                                                                 ║
+  ║   1. HEAD - мета-теги, noindex для поисковиков                               ║
+  ║   2. BODY - центрированный блок с ошибкой и навигацией                       ║
+  ║                                                                              ║
+  ║   ВАЖНО: Ищите пометки !!!!!ССЫЛКА для быстрого нахождения ресурсов          ║
+  ║                                                                              ║
+  ╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Страница не найдена — РДЦ</title>
+
+  <!-- Альтернативные языковые версии для SEO -->
+  <link rel="alternate" hreflang="ru" href="https://rdc-rt.ru/index.html" />
+  <link rel="alternate" hreflang="en" href="https://rdc-rt.ru/index-en.html" />
+  <link rel="alternate" hreflang="tt" href="https://rdc-rt.ru/index-tt.html" />
+  <link rel="alternate" hreflang="x-default" href="https://rdc-rt.ru/index.html" />
+
+  <!-- 
+    noindex, nofollow - запрещаем поисковикам индексировать страницу 404
+    Это стандартная практика для страниц ошибок
+  -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- 
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║                    ВНЕШНИЕ РЕСУРСЫ (CDN)                              ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+  -->
+
+  <!-- !!!!!ССЫЛКА - ВНЕШНИЙ СКРИПТ - TAILWIND CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- !!!!!ССЫЛКА - ВНЕШНИЙ ШРИФТ - GOOGLE FONTS INTER -->
+  <!-- Локальный шрифт Inter -->
+  <link rel="stylesheet" href="fonts/inter.css">
+
+  <!-- !!!!!ССЫЛКА - ВНЕШНИЙ СКРИПТ - LUCIDE ICONS CDN -->
+  <script src="js/lib/lucide.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<!--
+  BODY
+  flex items-center justify-center - центрирует контент по вертикали и горизонтали
+  min-h-screen - минимальная высота = высота экрана
+-->
+
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4">
+
+  <div class="text-center max-w-lg">
+    <!--
+      ═══════════════════════════════════════════════════════════════════════
+      ЛОГОТИП
+      ═══════════════════════════════════════════════════════════════════════
+      Кликабельный логотип, ведущий на главную страницу.
+      
+      !!!!!ССЫЛКА - ЛОГОТИП - ЛОКАЛЬНОЕ ИЗОБРАЖЕНИЕ
+    -->
+    <div class="flex justify-center mb-8">
+      <a href="index.html" class="flex items-center space-x-3">
+        <!-- !!!!!ССЫЛКА - ЛОГОТИП -->
+        <img src="./images/logo-new.png" alt="РДЦ" class="w-16 h-16" />
+        <div class="flex flex-col text-left">
+          <span class="text-2xl font-extrabold text-slate-900">РДЦ</span>
+          <span class="text-xs uppercase tracking-widest text-slate-500">Дата-центр</span>
+        </div>
+      </a>
+    </div>
+
+    <!--
+      ═══════════════════════════════════════════════════════════════════════
+      СООБЩЕНИЕ ОБ ОШИБКЕ 404
+      ═══════════════════════════════════════════════════════════════════════
+      Крупный код ошибки и поясняющий текст.
+    -->
+    <div class="mb-8">
+      <!-- Код ошибки 404 -->
+      <h1 class="text-8xl font-black text-blue-600 mb-4">404</h1>
+      <h2 class="text-2xl font-bold text-slate-900 mb-4" data-i18n="page_404_title">Страница не найдена</h2>
+      <p class="text-slate-600 mb-8" data-i18n="page_404_text">
+        К сожалению, запрашиваемая страница не существует или была перемещена.
+      </p>
+    </div>
+
+    <!--
+      ═══════════════════════════════════════════════════════════════════════
+      КНОПКИ ДЕЙСТВИЙ
+      ═══════════════════════════════════════════════════════════════════════
+      Основные действия для пользователя:
+      - Вернуться на главную
+      - Связаться с поддержкой
+      
+      !!!!!ССЫЛКА - КНОПКА - НА ГЛАВНУЮ (ВЕДЕТ НА INDEX.HTML)
+      !!!!!ССЫЛКА - КНОПКА - СВЯЗАТЬСЯ С НАМИ (ВЕДЕТ НА CONTACT.HTML)
+    -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <!-- !!!!!ССЫЛКА - КНОПКА - НА ГЛАВНУЮ -->
+      <a href="index.html"
+        class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all">
+        <i data-lucide="home" class="w-5 h-5 mr-2"></i>
+        <span data-i18n="page_404_home">На главную</span>
+      </a>
+      <!-- !!!!!ССЫЛКА - КНОПКА - СВЯЗАТЬСЯ С НАМИ -->
+      <a href="index.html#partners"
+        class="inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-3 rounded-xl font-semibold transition-all">
+        <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+        <span data-i18n="page_404_contact">Связаться с нами</span>
+      </a>
+
+      <!-- КНОПКА ВЕРСИИ ДЛЯ СЛАБОВИДЯЩИХ -->
+      <a href="accessible.html"
+        class="inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-3 rounded-xl font-semibold transition-all"
+        title="Версия для слабовидящих" aria-label="Версия для слабовидящих">
+        <i data-lucide="eye" class="w-5 h-5 mr-2"></i>
+        <span data-i18n="accessible_btn">Для слабовидящих</span>
+      </a>
+
+      <!-- КНОПКА ПЕРЕКЛЮЧЕНИЯ ЯЗЫКА -->
+      <button data-lang-switch
+        class="inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-3 rounded-xl font-semibold transition-all"
+        type="button" title="Татарча телегә күчү" aria-label="Татарча телегә күчү">
+        <i data-lucide="globe" class="w-5 h-5 mr-2"></i>
+        <span>ТАТ</span>
+      </button>
+    </div>
+
+    <!--
+      ═══════════════════════════════════════════════════════════════════════
+      БЫСТРЫЕ ССЫЛКИ
+      ═══════════════════════════════════════════════════════════════════════
+      Дополнительные ссылки для навигации.
+    -->
+    <div class="mt-12 pt-8 border-t border-slate-200">
+      <p class="text-sm text-slate-500 mb-4" data-i18n="page_404_hint">Возможно, вас интересует:</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="index.html#services" class="text-blue-600 hover:text-blue-700 font-medium text-sm"
+          data-i18n="nav_services">Услуги</a>
+        <a href="index.html#about" class="text-blue-600 hover:text-blue-700 font-medium text-sm" data-i18n="nav_about">О
+          центре</a>
+        <a href="index.html#team" class="text-blue-600 hover:text-blue-700 font-medium text-sm"
+          data-i18n="page_404_specialists">Специалисты</a>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    ═══════════════════════════════════════════════════════════════════════
+    JAVASCRIPT
+    ═══════════════════════════════════════════════════════════════════════
+    Только инициализация иконок Lucide.
+  -->
+  <script>
+    // Инициализация иконок Lucide
+    if (window.lucide) window.lucide.createIcons();
+  </script>
+
+  <!-- СИСТЕМА ИНТЕРНАЦИОНАЛИЗАЦИИ (i18n) -->
+  <script src="js/i18n/translations.js?v=20260118"></script>
+</body>
+
+</html>

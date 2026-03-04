@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--
+  ╔══════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                              ║
+  ║   РДЦ — СТРАНИЦА УСЛУГ                                                      ║
+  ║   Подробное описание всех услуг центра                                      ║
+  ║                                                                              ║
+  ╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Услуги — РДЦ</title>
+
+    <!-- Альтернативные языковые версии -->
+    <link rel="alternate" hreflang="ru" href="https://rdc-rt.ru/index.html" />
+    <link rel="alternate" hreflang="en" href="https://rdc-rt.ru/index-en.html" />
+    <link rel="alternate" hreflang="tt" href="https://rdc-rt.ru/index-tt.html" />
+    <link rel="alternate" hreflang="x-default" href="https://rdc-rt.ru/index.html" />
+
+    <meta name="description"
+        content="Услуги Радиологического дата-центра: МРТ, КТ, рентген, маммография, флюорография, мультимодальные исследования." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Услуги — РДЦ" />
+    <meta property="og:description"
+        content="Услуги Радиологического дата-центра: МРТ, КТ, рентген, маммография, флюорография." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Подключение локальных шрифтов Inter -->
+    <link rel="stylesheet" href="fonts/inter.css" />
+
+    <!-- Подключение локальных стилей -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+</head>
+
+<body class="bg-white text-slate-800 font-[Inter]">
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 shadow-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3 group" aria-label="РДЦ">
+                    <img src="./images/logo-new.png" alt="RdC Logo"
+                        class="w-12 h-12 transition-transform group-hover:scale-105" />
+                    <div class="flex flex-col">
+                        <span class="text-lg font-extrabold tracking-tight text-slate-900 leading-none"
+                            data-i18n="logo_short">РДЦ</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-semibold"
+                            data-i18n="logo_subtitle">Дата-центр</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                        data-i18n="hero_btn_about">О центре</a>
+                    <a href="services.html" class="text-sm font-medium text-blue-600 font-bold transition-colors"
+                        data-i18n="nav_services">Услуги</a>
+                    <a href="index.html#team"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                        data-i18n="nav_team">Наши специалисты</a>
+                    <a href="index.html#partners"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                        data-i18n="nav_partners">Сотрудничество</a>
+
+                    <!-- Языки -->
+                    <div class="flex items-center gap-2">
+                        <a href="services.html"
+                            class="px-2 py-1 rounded text-sm font-bold transition-all bg-blue-600 text-white"
+                            title="Русский" data-i18n="lang_short">RU</a>
+                        <a href="services-tt.html"
+                            class="px-2 py-1 rounded text-sm font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700"
+                            title="Татарча">TT</a>
+                        <a href="services-en.html"
+                            class="px-2 py-1 rounded text-sm font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-700"
+                            title="English">EN</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════ ОСНОВНОЙ КОНТЕНТ ═══════════════════ -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Хлебные крошки -->
+            <nav class="mb-8 text-sm text-slate-500" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-blue-600 transition-colors" data-i18n="hero_btn_about">О
+                    центре</a>
+                <span class="mx-2">→</span>
+                <span class="text-slate-900 font-semibold" data-i18n="nav_services">Услуги</span>
+            </nav>
+
+            <!-- Заголовок -->
+            <div class="text-center mb-16">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4" data-i18n="services_title">Наши
+                    услуги</h1>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto" data-i18n="services_subtitle">Описание и
+                    интерпретация проведенных исследований по следующим видам диагностики</p>
+            </div>
+
+            <!-- ═══════════════ УСЛУГА 1: МРТ ═══════════════ -->
+            <section id="mri" class="mb-16 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <!-- Изображение -->
+                        <div class="w-full lg:w-1/3 flex-shrink-0">
+                            <div class="w-full overflow-hidden rounded-2xl shadow-lg bg-slate-200"
+                                style="height: 250px;">
+                                <img src="images/services/MRT.png" alt="МРТ" class="w-full h-full object-cover"
+                                    loading="lazy" />
+                            </div>
+                        </div>
+                        <!-- Контент -->
+                        <div class="w-full lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-white w-12 h-12 rounded-xl shadow-sm flex items-center justify-center">
+                                    <i data-lucide="search" class="w-6 h-6 text-blue-500"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-slate-900" data-i18n="services_mri_title">
+                                    МРТ</h2>
+                            </div>
+                            <div class="text-slate-600 text-sm leading-relaxed space-y-3"
+                                data-i18n="services_mri_detail">
+                                <p>МРТ (магнитно‑резонансная томография) — это метод исследования внутренних структур
+                                    организма, основанный на использовании магнитного поля и радиоволн.</p>
+                                <h4 class="mt-4 font-semibold text-slate-800">Что можно исследовать с помощью МРТ</h4>
+                                <p>Метод особенно эффективен для визуализации мягких тканей:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>головной мозг</strong> — выявление опухолей, кровоизлияний, сосудистую
+                                        патологию;</li>
+                                    <li><strong>позвоночник</strong> — диагностика грыж межпозвоночных дисков,
+                                        спондилёза, опухолей;</li>
+                                    <li><strong>сердце и сосуды</strong> — оценка анатомических особенностей, аномалий,
+                                        дефектов;</li>
+                                    <li><strong>мышцы и суставы</strong> — обнаружение растяжений, разрывов, воспалений.
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Преимущества и срок -->
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_mri_feat1">Без ионизирующего излучения</span>
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_mri_feat2">Высокая детализация мягких тканей</span>
+                                <span
+                                    class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">⏱
+                                    3-24 часа</span>
+                            </div>
+                            <div class="mt-8">
+                                <a href="service-configurator.html"
+                                    class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all text-sm group">
+                                    <span data-i18n="services_configurator_btn">Рассчитать в конфигураторе</span>
+                                    <i data-lucide="calculator"
+                                        class="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ УСЛУГА 2: КТ ═══════════════ -->
+            <section id="ct" class="mb-16 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="w-full lg:w-1/3 flex-shrink-0">
+                            <div class="w-full overflow-hidden rounded-2xl shadow-lg bg-slate-200"
+                                style="height: 250px;">
+                                <img src="images/services/KT.png" alt="КТ" class="w-full h-full object-cover"
+                                    loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-white w-12 h-12 rounded-xl shadow-sm flex items-center justify-center">
+                                    <i data-lucide="search" class="w-6 h-6 text-blue-500"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-slate-900" data-i18n="services_ct_title">КТ</h2>
+                            </div>
+                            <div class="text-slate-600 text-sm leading-relaxed space-y-3"
+                                data-i18n="services_ct_detail">
+                                <p><strong>РКТ — рентгеновская компьютерная томография</strong> — метод диагностики, при
+                                    котором компьютер воссоздаёт модель изучаемого объекта после его послойного
+                                    сканирования с помощью узкого пучка рентгеновского излучения.</p>
+                                <h4 class="mt-4 font-semibold text-slate-800">Что можно исследовать с помощью РКТ</h4>
+                                <p><strong>Исследование органов грудной клетки</strong> — диагностика опухолей,
+                                    воспалительных заболеваний лёгких и средостения, патологии крупных сосудов.</p>
+                                <p><strong>Исследование органов брюшной полости</strong> — визуализация травм,
+                                    опухолевых и других поражений печени, жёлчного пузыря, селезёнки, поджелудочной
+                                    железы.</p>
+                                <p><strong>Исследование позвоночника</strong> — выявление травм,
+                                    дегенеративно-дистрофических изменений.</p>
+                                <p><strong>Исследование костей и суставов</strong> — подтверждение сложных
+                                    травматических, воспалительных и опухолевидных поражений.</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_ct_feat1">Быстрое проведение исследования</span>
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_ct_feat2">Возможность 3D-реконструкции</span>
+                                <span
+                                    class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">⏱
+                                    2-12 часов</span>
+                            </div>
+                            <div class="mt-8">
+                                <a href="service-configurator.html"
+                                    class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all text-sm group">
+                                    <span data-i18n="services_configurator_btn">Рассчитать в конфигураторе</span>
+                                    <i data-lucide="calculator"
+                                        class="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ УСЛУГА 3: РЕНТГЕН ═══════════════ -->
+            <section id="xray" class="mb-16 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="w-full lg:w-1/3 flex-shrink-0">
+                            <div class="w-full overflow-hidden rounded-2xl shadow-lg bg-slate-200"
+                                style="height: 250px;">
+                                <img src="images/services/Rengen.jpg" alt="Рентген" class="w-full h-full object-cover"
+                                    loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-white w-12 h-12 rounded-xl shadow-sm flex items-center justify-center">
+                                    <i data-lucide="search" class="w-6 h-6 text-blue-500"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-slate-900" data-i18n="services_xray_title">Рентген
+                                </h2>
+                            </div>
+                            <div class="text-slate-600 text-sm leading-relaxed space-y-3"
+                                data-i18n="services_xray_detail">
+                                <p><strong>Рентгенография (рентген)</strong> — метод медицинской диагностики, при
+                                    котором на исследуемую область тела направляется поток рентгеновского излучения.</p>
+                                <h4 class="mt-4 font-semibold text-slate-800">Область применения рентгенографии:</h4>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>рентген костей и суставов;</strong></li>
+                                    <li><strong>рентгенография грудной клетки;</strong></li>
+                                    <li><strong>рентген позвоночника:</strong> шейного, грудного, поясничного отделов;
+                                    </li>
+                                    <li><strong>рентген черепа и придаточных пазух носа;</strong></li>
+                                    <li><strong>рентген органов брюшной полости;</strong></li>
+                                    <li><strong>ангиография</strong> — контрастное исследование сосудов.</li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_xray_feat1">Быстрое получение результата</span>
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_xray_feat2">Минимальная лучевая нагрузка</span>
+                                <span
+                                    class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">⏱
+                                    1-6 часов</span>
+                            </div>
+                            <div class="mt-8">
+                                <a href="service-configurator.html"
+                                    class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all text-sm group">
+                                    <span data-i18n="services_configurator_btn">Рассчитать в конфигураторе</span>
+                                    <i data-lucide="calculator"
+                                        class="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ УСЛУГА 4: МАММОГРАФИЯ ═══════════════ -->
+            <section id="mammography" class="mb-16 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="w-full lg:w-1/3 flex-shrink-0">
+                            <div class="w-full overflow-hidden rounded-2xl shadow-lg bg-slate-200"
+                                style="height: 250px;">
+                                <img src="images/services/Mamograf.png" alt="Маммография"
+                                    class="w-full h-full object-cover" loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-white w-12 h-12 rounded-xl shadow-sm flex items-center justify-center">
+                                    <i data-lucide="search" class="w-6 h-6 text-blue-500"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-slate-900" data-i18n="services_mammo_title">
+                                    Маммография</h2>
+                            </div>
+                            <div class="text-slate-600 text-sm leading-relaxed space-y-3"
+                                data-i18n="services_mammo_detail">
+                                <p><strong>Маммография — это рентгенологическое исследование молочных желез</strong>,
+                                    которое позволяет выявить различные патологии, включая злокачественные
+                                    новообразования.</p>
+                                <h4 class="mt-4 font-semibold text-slate-800">Цель маммографии</h4>
+                                <p>Цель маммографии — выявление изменений в структуре тканей молочной железы. С помощью
+                                    исследования можно обнаружить:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>фиброаденому</strong> — плотное узелковое образование;</li>
+                                    <li><strong>кисту</strong> — полость с жидкостью;</li>
+                                    <li><strong>кальцинаты</strong> — участки отложения кальция;</li>
+                                    <li><strong>уплотнения и деформации тканей;</strong></li>
+                                    <li><strong>злокачественные опухоли на ранней стадии.</strong></li>
+                                </ul>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_mammo_feat1">Раннее выявление образований</span>
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_mammo_feat2">Высокая информативность</span>
+                                <span
+                                    class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">⏱
+                                    3-12 часов</span>
+                            </div>
+                            <div class="mt-8">
+                                <a href="service-configurator.html"
+                                    class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all text-sm group">
+                                    <span data-i18n="services_configurator_btn">Рассчитать в конфигураторе</span>
+                                    <i data-lucide="calculator"
+                                        class="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ УСЛУГА 5: ФЛЮОРОГРАФИЯ ═══════════════ -->
+            <section id="fluoro" class="mb-16 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="w-full lg:w-1/3 flex-shrink-0">
+                            <div class="w-full overflow-hidden rounded-2xl shadow-lg bg-slate-200"
+                                style="height: 250px;">
+                                <img src="images/services/Phluograf.png" alt="Флюорография"
+                                    class="w-full h-full object-cover" loading="lazy" />
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="bg-white w-12 h-12 rounded-xl shadow-sm flex items-center justify-center">
+                                    <i data-lucide="search" class="w-6 h-6 text-blue-500"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-slate-900" data-i18n="services_fluoro_title">
+                                    Флюорография</h2>
+                            </div>
+                            <div class="text-slate-600 text-sm leading-relaxed space-y-3"
+                                data-i18n="services_fluoro_detail">
+                                <p><strong>Флюорография</strong> — это метод рентгенологического исследования, при
+                                    котором изображение органов грудной клетки регистрируется цифровой матрицей.</p>
+                                <h4 class="mt-4 font-semibold text-slate-800">Заболевания, которые можно обнаружить с
+                                    помощью флюорографии:</h4>
+                                <p>Туберкулёз лёгких, крупные новообразования (опухоли), массивные воспалительные
+                                    процессы.</p>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_fluoro_feat1">Массовый скрининг</span>
+                                <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                    data-i18n="services_fluoro_feat2">Минимальная доза облучения</span>
+                                <span
+                                    class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">⏱
+                                    1-3 часа</span>
+                            </div>
+                            <div class="mt-8">
+                                <a href="service-configurator.html"
+                                    class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all text-sm group">
+                                    <span data-i18n="services_configurator_btn">Рассчитать в конфигураторе</span>
+                                    <i data-lucide="calculator"
+                                        class="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ УСЛУГА 6: МУЛЬТИМОДАЛЬНЫЕ ═══════════════ -->
+            <section id="multimodal" class="mb-16 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
+                    <div class="lg:w-full">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-white w-12 h-12 rounded-xl shadow-sm flex items-center justify-center">
+                                <i data-lucide="search" class="w-6 h-6 text-blue-500"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-slate-900" data-i18n="services_multi_title">
+                                Мультимодальные исследования</h2>
+                        </div>
+                        <div class="text-slate-600 text-sm leading-relaxed space-y-3" data-i18n="services_multi_detail">
+                            <p>Мультимодальная диагностика — комплексный подход к анализу данных нескольких методов
+                                визуализации для получения полной клинической картины.</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li><strong>Сопоставление данных</strong> МРТ, КТ, рентгенографии</li>
+                                <li><strong>Динамическое наблюдение</strong> за состоянием пациента</li>
+                                <li><strong>Консилиум специалистов</strong> для сложных случаев</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                data-i18n="services_multi_feat1">Комплексная оценка</span>
+                            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full"
+                                data-i18n="services_multi_feat2">Консилиум экспертов</span>
+                            <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full">⏱
+                                24-48 часов</span>
+                        </div>
+                        <div class="mt-8">
+                            <a href="service-configurator.html"
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all text-sm group">
+                                <span data-i18n="services_configurator_btn">Рассчитать в конфигураторе</span>
+                                <i data-lucide="calculator"
+                                    class="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Кнопка возврата -->
+            <div class="text-center">
+                <a href="index.html"
+                    class="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all"
+                    data-i18n="doctors_page_back">← Вернуться на главную</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="bg-slate-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-400 text-sm">
+                © <span id="footerYear">2025</span>
+                <span data-i18n="hero_title_full">Радиологический дата-центр</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Иконки Lucide -->
+    <script src="js/lib/lucide.min.js"></script>
+    <script>lucide.createIcons();</script>
+
+    <script>
+        const y = document.getElementById('footerYear');
+        if (y) y.textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

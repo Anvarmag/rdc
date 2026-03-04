@@ -1,0 +1,586 @@
+/**
+ * ==========================================================================
+ * РДЦ - Радиологический дата-центр
+ * ФАЙЛ: components.css
+ * НАЗНАЧЕНИЕ: Стили для переиспользуемых компонентов
+ * ==========================================================================
+ * 
+ * ЧТО ЭТО ТАКОЕ:
+ * Этот файл содержит стили для всех визуальных компонентов сайта:
+ * кнопки, карточки, бейджи, секции, модальные окна и т.д.
+ * 
+ * КАК ИСПОЛЬЗОВАТЬ:
+ * Добавьте нужный класс к HTML элементу:
+ * <button class="btn btn-primary">Кнопка</button>
+ * <div class="card card-body">Карточка</div>
+ * 
+ * ЗАЧЕМ ЭТО НУЖНО:
+ * Компоненты можно переиспользовать на разных страницах.
+ * Изменив стиль здесь, он изменится везде.
+ * 
+ * ==========================================================================
+ */
+
+/* ========================================
+ * КНОПКИ (Buttons)
+ * ========================================
+ * Разные виды кнопок для действий на сайте.
+ * 
+ * Использование:
+ * <button class="btn btn-primary">Главная кнопка</button>
+ * <button class="btn btn-secondary">Второстепенная</button>
+ * <button class="btn btn-primary btn-lg">Большая кнопка</button>
+ * ======================================== */
+
+/* ------------------------
+ * Базовые стили кнопки
+ * ------------------------
+ * Общие стили для всех кнопок.
+ */
+.btn {
+  display: inline-flex;           /* Flex для выравнивания иконок */
+  align-items: center;            /* Центрирование по вертикали */
+  justify-content: center;        /* Центрирование по горизонтали */
+  gap: var(--spacing-2);          /* Отступ между иконкой и текстом */
+  padding: var(--spacing-3) var(--spacing-6);  /* Внутренние отступы */
+  font-size: var(--font-size-sm); /* 14px */
+  font-weight: var(--font-weight-semibold);    /* Полужирный */
+  line-height: 1;                 /* Без лишнего межстрочного интервала */
+  border-radius: var(--radius-xl); /* Скругленные углы 12px */
+  transition: all var(--transition-fast);       /* Плавные переходы */
+  white-space: nowrap;            /* Текст в одну строку */
+}
+
+/* ------------------------
+ * Главная кнопка (Primary)
+ * ------------------------
+ * Синяя кнопка для основных действий: "Заказать", "Отправить".
+ * 
+ * !!!!! КНОПКА_ГЛАВНАЯ - СТИЛИ ОСНОВНОЙ СИНЕЙ КНОПКИ !!!!!
+ */
+.btn-primary {
+  background-color: var(--color-primary-600);  /* Синий фон */
+  color: white;                                 /* Белый текст */
+  box-shadow: var(--shadow-primary);           /* Синяя тень */
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-700);  /* Темнее при наведении */
+  transform: translateY(-1px);                 /* Немного приподнимается */
+}
+
+.btn-primary:active {
+  transform: translateY(0);  /* Возвращается при нажатии */
+}
+
+/* ------------------------
+ * Второстепенная кнопка (Secondary)
+ * ------------------------
+ * Белая кнопка с серой рамкой для второстепенных действий.
+ */
+.btn-secondary {
+  background-color: white;
+  color: var(--color-neutral-700);             /* Темно-серый текст */
+  border: 1px solid var(--color-neutral-200);  /* Светло-серая рамка */
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-neutral-50);   /* Светло-серый фон */
+  border-color: var(--color-neutral-300);      /* Чуть темнее рамка */
+}
+
+/* ------------------------
+ * Кнопка-призрак (Ghost)
+ * ------------------------
+ * Прозрачная кнопка, появляется фон только при наведении.
+ */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-neutral-600);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+}
+
+/* ------------------------
+ * Размеры кнопок
+ * ------------------------ */
+
+/* Маленькая кнопка */
+.btn-sm {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-xs);  /* 12px */
+}
+
+/* Большая кнопка */
+.btn-lg {
+  padding: var(--spacing-4) var(--spacing-8);
+  font-size: var(--font-size-lg);  /* 18px */
+  border-radius: var(--radius-2xl); /* Более скругленная */
+}
+
+/* ========================================
+ * КАРТОЧКИ (Cards)
+ * ========================================
+ * Контейнеры для группировки информации.
+ * 
+ * Использование:
+ * <div class="card">
+ *   <div class="card-body">Контент</div>
+ * </div>
+ * ======================================== */
+
+.card {
+  background-color: white;
+  border-radius: var(--radius-3xl);            /* Большое скругление 24px */
+  border: 1px solid var(--color-neutral-100);  /* Едва заметная рамка */
+  transition: all var(--transition-normal);
+}
+
+/* Карточка с эффектом при наведении */
+.card-hover:hover {
+  border-color: var(--color-primary-100);      /* Синеватая рамка */
+  box-shadow: var(--shadow-xl);                /* Большая тень */
+  transform: translateY(-2px);                 /* Приподнимается */
+}
+
+/* Внутренняя часть карточки */
+.card-body {
+  padding: var(--spacing-8);  /* Отступы 32px */
+}
+
+/* Шапка карточки */
+.card-header {
+  padding: var(--spacing-6) var(--spacing-8);
+  border-bottom: 1px solid var(--color-neutral-100);
+}
+
+/* Подвал карточки */
+.card-footer {
+  padding: var(--spacing-4) var(--spacing-8);
+  border-top: 1px solid var(--color-neutral-100);
+  background-color: var(--color-neutral-50);
+  border-radius: 0 0 var(--radius-3xl) var(--radius-3xl);  /* Скругление только снизу */
+}
+
+/* ========================================
+ * ЭФФЕКТ СТЕКЛА (Glass Effect)
+ * ========================================
+ * Полупрозрачный фон с размытием (как матовое стекло).
+ * Используется в хедере при скролле.
+ * ======================================== */
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.86);       /* Полупрозрачный белый */
+  -webkit-backdrop-filter: blur(12px);         /* Размытие фона (Safari) */
+  backdrop-filter: blur(12px);                 /* Размытие фона */
+}
+
+/* Fallback для браузеров без поддержки backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.94);     /* Менее прозрачный фон */
+  }
+}
+
+/* ========================================
+ * ГРАДИЕНТНЫЙ ТЕКСТ (Gradient Text)
+ * ========================================
+ * Текст с градиентной заливкой (переход от голубого к синему).
+ * Используется для акцентных заголовков.
+ * 
+ * !!!!! ГРАДИЕНТ_ТЕКСТА - ЦВЕТА ГРАДИЕНТА ДЛЯ ЗАГОЛОВКОВ !!!!!
+ * ======================================== */
+
+.gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);  /* От голубого к синему */
+  -webkit-background-clip: text;               /* Обрезаем фон по тексту */
+  -webkit-text-fill-color: transparent;        /* Делаем текст прозрачным */
+  background-clip: text;
+}
+
+/* ========================================
+ * БЕЙДЖИ / ТЕГИ (Badges)
+ * ========================================
+ * Маленькие метки для статусов, категорий.
+ * 
+ * Использование:
+ * <span class="badge badge-primary">МРТ эксперт</span>
+ * ======================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-xs);              /* 12px */
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;                   /* ЗАГЛАВНЫЕ БУКВЫ */
+  letter-spacing: 0.05em;                      /* Разрядка букв */
+  border-radius: var(--radius-full);           /* Полностью круглые края */
+}
+
+/* Синий бейдж */
+.badge-primary {
+  background-color: var(--color-primary-50);   /* Светло-синий фон */
+  color: var(--color-primary-700);             /* Темно-синий текст */
+  border: 1px solid var(--color-primary-100);
+}
+
+/* Зеленый бейдж (успех) */
+.badge-success {
+  background-color: var(--color-success-50);
+  color: var(--color-success-700);
+}
+
+/* ========================================
+ * КОНТЕЙНЕР ДЛЯ ИКОНОК (Icon Box)
+ * ========================================
+ * Квадратный контейнер с иконкой внутри.
+ * Используется в карточках услуг.
+ * ======================================== */
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;                                 /* 64px */
+  height: 4rem;
+  border-radius: var(--radius-2xl);            /* Скругление 16px */
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+}
+
+.icon-box:hover {
+  transform: scale(1.1) rotate(-3deg);         /* Увеличение и поворот */
+}
+
+.icon-box svg {
+  width: 2rem;                                 /* 32px */
+  height: 2rem;
+  color: var(--color-primary-500);             /* Синий цвет иконки */
+}
+
+/* ========================================
+ * СЕКЦИИ СТРАНИЦЫ (Sections)
+ * ========================================
+ * Стили для разделов страницы с заголовками.
+ * ======================================== */
+
+.section {
+  padding: var(--spacing-24) 0;                /* Отступы сверху и снизу 96px */
+}
+
+/* Шапка секции (заголовок + подзаголовок) */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-16);            /* Отступ снизу 64px */
+}
+
+/* Заголовок секции */
+.section-title {
+  font-size: var(--font-size-3xl);             /* 30px */
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Подзаголовок секции */
+.section-subtitle {
+  font-size: var(--font-size-lg);              /* 18px */
+  color: var(--color-neutral-500);             /* Серый */
+  max-width: 42rem;                            /* Ограничиваем ширину для читаемости */
+  margin: 0 auto;                              /* Центрируем */
+}
+
+/* ========================================
+ * КОНТЕЙНЕР (Container)
+ * ========================================
+ * Ограничивает ширину контента и центрирует его.
+ * ======================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-xl);              /* 1280px */
+  margin: 0 auto;                              /* Центрирование */
+  padding: 0 var(--spacing-4);                 /* Боковые отступы 16px */
+}
+
+/* Увеличиваем боковые отступы на больших экранах */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--spacing-6);               /* 24px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-8);               /* 32px */
+  }
+}
+
+/* ========================================
+ * ШАПКА САЙТА (Header)
+ * ========================================
+ * Фиксированная навигация в верхней части сайта.
+ * ======================================== */
+
+.header {
+  position: fixed;                             /* Фиксируем сверху */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);                     /* Поверх основного контента */
+  transition: all var(--transition-normal);
+}
+
+/* Состояние хедера при скролле */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.9);        /* Полупрозрачный белый */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Ссылки навигации */
+.nav-link {
+  font-size: var(--font-size-sm);              /* 14px */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-700);             /* Тёмно-серый */
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-primary-600);             /* Синий при наведении */
+}
+
+/* ========================================
+ * МОДАЛЬНОЕ ОКНО (Modal)
+ * ========================================
+ * Всплывающее окно поверх страницы.
+ * Используется для профилей врачей.
+ * ======================================== */
+
+/* Затемненный фон за модальным окном */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;                                    /* top/right/bottom/left: 0 */
+  background-color: rgba(15, 23, 42, 0.6);     /* Темное затемнение */
+  -webkit-backdrop-filter: blur(4px);          /* Размытие фона */
+  backdrop-filter: blur(4px);
+  z-index: var(--z-modal-backdrop);
+}
+
+/* Контейнер модального окна */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4);
+}
+
+/* Само модальное окно (карточка) */
+.modal-content {
+  background-color: white;
+  border-radius: var(--radius-4xl);            /* Очень скругленные углы */
+  box-shadow: var(--shadow-2xl);
+  max-width: 56rem;                            /* 896px */
+  max-height: 90vh;                            /* Не выше 90% экрана */
+  overflow: hidden;
+  animation: modalEnter 0.2s ease-out;         /* Анимация появления */
+}
+
+/* Анимация появления модального окна */
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.98);                    /* Немного уменьшено */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);                       /* Нормальный размер */
+  }
+}
+
+/* ========================================
+ * ПОДВАЛ САЙТА (Footer)
+ * ========================================
+ * Темная секция внизу страницы с контактами и ссылками.
+ * ======================================== */
+
+.footer {
+  /* !!!!! ФОН_ФУТЕРА - ТЕМНЫЙ ФОН ПОДВАЛА САЙТА !!!!! */
+  background-color: var(--color-neutral-900);  /* Почти черный */
+  color: white;
+  padding: var(--spacing-24) 0 var(--spacing-12);
+}
+
+/* Ссылки в футере */
+.footer-link {
+  color: var(--color-neutral-400);             /* Серый */
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: white;                                /* Белый при наведении */
+}
+
+/* Заголовки колонок в футере */
+.footer-title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;                       /* Разрядка */
+  color: var(--color-primary-500);             /* Синий акцент */
+  margin-bottom: var(--spacing-6);
+}
+
+/* ========================================
+ * АНИМАЦИИ
+ * ========================================
+ * Определения keyframes для анимаций.
+ * ======================================== */
+
+/* Анимация плавания (для декоративных элементов) */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);              /* Поднимается на 10px */
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;    /* Бесконечная плавная анимация */
+}
+
+/* Анимация пульсации (для индикаторов) */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ========================================
+ * ПУЛЬСИРУЮЩАЯ ТОЧКА (Pulse Dot)
+ * ========================================
+ * Индикатор онлайн-статуса или активности.
+ * ======================================== */
+
+.pulse-dot {
+  position: relative;
+  display: inline-flex;
+  width: 0.5rem;                               /* 8px */
+  height: 0.5rem;
+}
+
+/* Расходящийся круг */
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-primary-400);
+  border-radius: var(--radius-full);
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Центральная точка */
+.pulse-dot::after {
+  content: '';
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary-500);
+  border-radius: var(--radius-full);
+}
+
+/* Анимация расходящегося круга */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+/* ========================================
+ * КУКИ-БАННЕР (Cookie Consent)
+ * ========================================
+ * Всплывающее уведомление о использовании куки.
+ * ======================================== */
+
+/* ========================================
+ * КУКИ-БАННЕР (Cookie Consent) - Компактный по центру
+ * ======================================== */
+
+.cookie-container {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  bottom: 30px; /* Отступ снизу */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translateX(-50%); /* Сдвиг на половину своей ширины */
+  
+  width: 90%; /* Ширина на мобильных */
+  max-width: 800px; /* Максимальная ширина на ПК */
+  
+  background-color: white;
+  padding: var(--spacing-4); /* Компактные отступы (16px) */
+  border-radius: var(--radius-xl); /* Скругление (12px) */
+  box-shadow: var(--shadow-xl); /* Заметная тень */
+  z-index: 10000; /* Поверх всего */
+  border: 1px solid var(--color-neutral-100);
+}
+
+.cookie-content {
+  display: flex;
+  align-items: center; /* Выравнивание по вертикали по центру */
+  justify-content: space-between; /* Текст слева, кнопка справа */
+  gap: var(--spacing-6); /* Расстояние между текстом и кнопкой (24px) */
+}
+
+.cookie-text {
+  margin: 0;
+  font-size: var(--font-size-sm); /* 14px */
+  color: var(--color-neutral-700); /* Тёмно-серый текст */
+  line-height: 1.4;
+  flex-grow: 1; /* Текст занимает всё доступное место */
+}
+
+/* Явное выделение ссылки */
+.cookie-text a {
+  color: var(--color-primary-600); /* Синий цвет */
+  font-weight: var(--font-weight-bold); /* Жирный текст */
+  text-decoration: underline; /* Подчеркивание */
+  transition: color var(--transition-fast);
+}
+
+.cookie-text a:hover {
+  color: var(--color-primary-700); /* Темнее при наведении */
+  text-decoration: none;
+}
+
+/* На маленьких экранах (мобильные) делаем столбиком */
+@media (max-width: 640px) {
+  .cookie-content {
+    flex-direction: column; /* Текст над кнопкой */
+    align-items: stretch; /* Кнопка на всю ширину */
+    gap: var(--spacing-4);
+  }
+  .cookie-text {
+    text-align: center;
+  }
+}

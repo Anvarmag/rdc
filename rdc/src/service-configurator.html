@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Конфигуратор услуг — РДЦ</title>
+
+    <meta name="description"
+        content="Настройте и закажите услуги Радиологического дата-центра: МРТ, КТ, рентген, маммография, флюорография онлайн." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Подключение локальных шрифтов Inter -->
+    <link rel="stylesheet" href="fonts/inter.css" />
+
+    <!-- Подключение локальных стилей -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-[Inter] min-h-screen flex flex-col">
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 shadow-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3 group" aria-label="РДЦ">
+                    <img src="./images/logo-new.png" alt="RdC Logo"
+                        class="w-12 h-12 transition-transform group-hover:scale-105" />
+                    <div class="flex flex-col">
+                        <span class="text-lg font-extrabold tracking-tight text-slate-900 leading-none">РДЦ</span>
+                        <span
+                            class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-semibold">Дата-центр</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">О центре</a>
+                    <a href="services.html"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Услуги</a>
+                    <a href="index.html#team"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Наши
+                        специалисты</a>
+                    <a href="index.html#partners"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Сотрудничество</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════ ОСНОВНОЙ КОНТЕНТ ═══════════════════ -->
+    <main class="pt-24 pb-16 flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-10">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4" data-i18n="conf_title">Оформление
+                    заказа</h1>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto" data-i18n="conf_subtitle">Выберите исследование,
+                    заполните анкету и оплатите
+                    услугу онлайн.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8 relative items-start">
+
+                <!-- Левая колонка: Форма конфигуратора -->
+                <div class="w-full lg:w-2/3 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+                    <form id="configuratorForm" class="space-y-10">
+
+                        <!-- Шаг 1: Выбор услуги -->
+                        <section>
+                            <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <span
+                                    class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">1</span>
+                                <span data-i18n="conf_step1">Выберите исследование</span>
+                            </h2>
+                            <div class="space-y-3">
+                                <label
+                                    class="flex items-start p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition-colors">
+                                    <input type="radio" name="serviceId" value="mri"
+                                        class="mt-1 w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" required>
+                                    <div class="ml-3">
+                                        <span class="block text-sm font-semibold text-slate-900"
+                                            data-i18n="conf_mri">Описание МРТ
+                                            исследования</span>
+                                        <span class="block text-xs text-slate-500" data-i18n="conf_mri_desc">(1
+                                            область)</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-start p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition-colors">
+                                    <input type="radio" name="serviceId" value="ct"
+                                        class="mt-1 w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" required>
+                                    <div class="ml-3">
+                                        <span class="block text-sm font-semibold text-slate-900"
+                                            data-i18n="conf_ct">Описание РКТ
+                                            исследования</span>
+                                        <span class="block text-xs text-slate-500" data-i18n="conf_ct_desc">(1
+                                            область)</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-start p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition-colors">
+                                    <input type="radio" name="serviceId" value="xray"
+                                        class="mt-1 w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" required>
+                                    <div class="ml-3">
+                                        <span class="block text-sm font-semibold text-slate-900"
+                                            data-i18n="conf_xray">Описание рентгеновского
+                                            исследования</span>
+                                        <span class="block text-xs text-slate-500" data-i18n="conf_xray_desc">(1
+                                            область)</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-start p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition-colors">
+                                    <input type="radio" name="serviceId" value="mammography"
+                                        class="mt-1 w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" required>
+                                    <div class="ml-3">
+                                        <span class="block text-sm font-semibold text-slate-900"
+                                            data-i18n="conf_mammo">Описание
+                                            маммографии</span>
+                                        <span class="block text-xs text-slate-500" data-i18n="conf_mammo_desc">(1
+                                            исследование)</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-start p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition-colors">
+                                    <input type="radio" name="serviceId" value="fluorography"
+                                        class="mt-1 w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" required>
+                                    <div class="ml-3">
+                                        <span class="block text-sm font-semibold text-slate-900"
+                                            data-i18n="conf_fluoro">Описание
+                                            флюорографии</span>
+                                        <span class="block text-xs text-slate-500" data-i18n="conf_fluoro_desc">(1
+                                            исследование)</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </section>
+
+                        <!-- Шаг 2: Срок результата -->
+                        <section>
+                            <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <span
+                                    class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">2</span>
+                                <span data-i18n="conf_step2">Срок результата</span>
+                            </h2>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <label
+                                    class="flex items-center p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition-colors">
+                                    <input type="radio" name="time" id="time24h" value="24h"
+                                        class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500" checked>
+                                    <span class="ml-3 text-sm font-semibold text-slate-900"
+                                        data-i18n="conf_time_24h">Стандартный (24 часа)</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 border border-slate-200 rounded-xl cursor-pointer hover:border-blue-500 transition-colors transition-opacity duration-300">
+                                    <input type="radio" name="time" id="time3h" value="3h"
+                                        class="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500">
+                                    <span class="ml-3 text-sm font-semibold text-slate-900"
+                                        data-i18n="conf_time_3h">Ускоренный (3 часа)</span>
+                                </label>
+                            </div>
+                        </section>
+
+                        <!-- Шаг 3: Дополнительные опции -->
+                        <section>
+                            <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <span
+                                    class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">3</span>
+                                <span data-i18n="conf_step3">Дополнительные опции</span>
+                            </h2>
+
+                            <!-- Блок ИИ -->
+                            <div id="aiBlock" class="hidden mb-4 p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                                <label class="flex items-start cursor-pointer">
+                                    <input type="checkbox" id="aiEnabled"
+                                        class="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <div class="ml-3">
+                                        <span class="block text-sm font-semibold text-slate-900"
+                                            data-i18n="conf_ai">Анализ с использованием
+                                            Искусственного Интеллекта</span>
+                                        <span class="block text-xs text-slate-500" data-i18n="conf_ai_desc">Повышает
+                                            точность диагностики с
+                                            помощью технологии "Второе мнение".</span>
+                                    </div>
+                                </label>
+
+                                <div id="aiSubtypesBlock" class="hidden mt-4 pl-8">
+                                    <label class="block text-sm font-medium text-slate-700 mb-1"
+                                        data-i18n="conf_ai_select">Уточните область для
+                                        ИИ:</label>
+                                    <select id="aiSubtypes"
+                                        class="w-full sm:w-1/2 p-2 border border-slate-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-sm">
+                                        <!-- Options injected by JS -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Блок Консилиум -->
+                            <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                                <label class="flex items-start cursor-pointer">
+                                    <input type="checkbox" id="concilium"
+                                        class="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <div class="ml-3">
+                                        <span class="block text-sm font-semibold text-slate-900"
+                                            data-i18n="conf_concilium">Консилиум врачей</span>
+                                        <span class="block text-xs text-slate-500"><span
+                                                data-i18n="conf_concilium_desc">Заключение с учетом мнений не менее
+                                                3х врачей, включая кандидата медицинских наук.</span><br>
+                                            <span class="text-blue-600 font-medium"
+                                                data-i18n="conf_concilium_warning">Внимание: при выборе консилиума срок
+                                                исполнения результата фиксируется на 24 часа.</span></span>
+                                    </div>
+                                </label>
+                            </div>
+                        </section>
+
+                        <!-- Шаг 4: Данные пациента -->
+                        <section>
+                            <h2 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                <span
+                                    class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">4</span>
+                                <span data-i18n="conf_step4">Данные пациента</span>
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_name">ФИО полностью
+                                        *</label>
+                                    <input type="text" id="fullName" required
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_phone">Телефон *</label>
+                                    <input type="tel" id="phone" required placeholder="+7 (999) 000-00-00"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_email">E-mail *</label>
+                                    <input type="email" id="email" required placeholder="example@mail.ru"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_city">Город</label>
+                                    <input type="text" id="city"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                            data-i18n="conf_age">Возраст *</label>
+                                        <input type="number" id="age" required min="0" max="150"
+                                            class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                            data-i18n="conf_gender">Пол *</label>
+                                        <select id="gender" required
+                                            class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                            <option value="" disabled selected data-i18n="conf_gender_select">Выберите
+                                            </option>
+                                            <option value="М" data-i18n="conf_gender_m">Мужской</option>
+                                            <option value="Ж" data-i18n="conf_gender_f">Женский</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_study_area">Вид и область
+                                        исследования *</label>
+                                    <input type="text" id="studyArea" required
+                                        data-i18n-placeholder="conf_study_area_placeholder"
+                                        placeholder="Например: МРТ головного мозга"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                </div>
+                            </div>
+
+                            <div class="mt-4 space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_oncology">Наличие
+                                        онкозаболеваний</label>
+                                    <input type="text" id="oncology" placeholder="Если есть, укажите"
+                                        data-i18n-placeholder="conf_oncology_placeholder"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_surgery">Хирургические
+                                        вмешательства</label>
+                                    <textarea id="surgery" rows="2" placeholder="Опишите, если были"
+                                        data-i18n-placeholder="conf_surgery_placeholder"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm"></textarea>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_link">Ссылка на
+                                        исследование (DICOM) *</label>
+                                    <input type="url" id="cloudLink" required
+                                        data-i18n-placeholder="conf_link_placeholder"
+                                        placeholder="Ссылка на Яндекс.Диск / Google Drive"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1"
+                                        data-i18n="conf_complaints">Жалобы или
+                                        клиническая картина</label>
+                                    <textarea id="complaints" rows="3" placeholder="Опишите ваши симптомы"
+                                        data-i18n-placeholder="conf_complaints_placeholder"
+                                        class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm transition-all shadow-sm"></textarea>
+                                </div>
+                            </div>
+                        </section>
+
+                    </form>
+
+                    <!-- Инструкция на мобильных -->
+                    <div class="mt-10 lg:hidden p-6 bg-blue-50 rounded-2xl border border-blue-100">
+                        <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <i data-lucide="info" class="w-5 h-5 text-blue-600"></i> <span
+                                data-i18n="conf_instruction_title">Как загрузить исследование?</span>
+                        </h3>
+                        <ol class="list-decimal list-inside text-sm text-slate-700 space-y-2 mb-4">
+                            <li data-i18n="conf_instr_1">Создайте ZIP-архив с файлами DICOM.</li>
+                            <li data-i18n="conf_instr_2">Загрузите архив в облако (Яндекс.Диск, Google Drive или Mail.ru
+                                Cloud).</li>
+                            <li data-i18n="conf_instr_3">Создайте ссылку для доступа к файлу.</li>
+                            <li data-i18n="conf_instr_4">Вставьте полученную ссылку в поле анкеты.</li>
+                        </ol>
+                        <h3 class="font-bold text-slate-900 mt-6 mb-2" data-i18n="conf_schedule_title">Режим работы</h3>
+                        <p class="text-sm text-slate-700 border-l-4 border-blue-500 pl-3 py-1">
+                            <span data-i18n="conf_schedule_1">Принимаем заявки 24/7.</span><br>
+                            <span data-i18n="conf_schedule_2">Обработка с 09:00 до 21:00.</span><br>
+                            <span data-i18n="conf_schedule_3">Заказы, оплаченные после 21:00, обрабатываются в 09:00
+                                следующего дня.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: Итог и Инструкция (Sticky) -->
+                <div class="w-full lg:w-1/3 lg:sticky lg:top-28 space-y-6 flex flex-col items-stretch h-full">
+
+                    <!-- Блок Итог -->
+                    <div
+                        class="bg-white rounded-t-3xl border border-b-0 lg:border-b lg:rounded-3xl p-5 lg:p-6 border-slate-200 shadow-[0_-5px_20px_rgba(0,0,0,0.05)] lg:shadow-md sticky bottom-0 z-40 lg:relative w-full box-border">
+                        <h2 class="text-xl font-bold text-slate-900 mb-4 border-b pb-3" data-i18n="conf_summary_title">
+                            Итог заказа</h2>
+
+                        <dl class="space-y-3 text-sm mb-6">
+                            <div class="flex justify-between items-start gap-4">
+                                <dt class="text-slate-500" data-i18n="conf_sum_service">Услуга:</dt>
+                                <dd id="summaryService" class="font-medium text-right text-slate-900"
+                                    data-i18n="conf_sum_none">Не выбрано</dd>
+                            </div>
+                            <div class="flex justify-between items-start gap-4">
+                                <dt class="text-slate-500" data-i18n="conf_sum_time">Срок:</dt>
+                                <dd id="summaryTime" class="font-medium text-right text-slate-900">-</dd>
+                            </div>
+                            <div class="flex justify-between items-start gap-4">
+                                <dt class="text-slate-500" data-i18n="conf_sum_ai">Поддержка ИИ:</dt>
+                                <dd id="summaryAI" class="font-medium text-right text-slate-900">-</dd>
+                            </div>
+                            <div class="flex justify-between items-start gap-4">
+                                <dt class="text-slate-500" data-i18n="conf_sum_concilium">Консилиум:</dt>
+                                <dd id="summaryConcilium" class="font-medium text-right text-slate-900">-</dd>
+                            </div>
+                        </dl>
+
+                        <div class="border-t pt-4 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-500 font-medium" data-i18n="conf_sum_total">К оплате:</span>
+                                <span id="summaryTotal" class="text-2xl font-bold text-blue-600">0 ₽</span>
+                            </div>
+                        </div>
+
+                        <!-- Ошибки валидации -->
+                        <div id="errorBox"
+                            class="hidden mb-4 p-3 bg-red-50 text-red-600 text-sm rounded-lg border border-red-200">
+                        </div>
+
+                        <!-- Скрытые строки для i18n в JS -->
+                        <div id="i18n-errors" class="hidden">
+                            <span id="err_select_service" data-i18n="error_select_service">Пожалуйста, выберите
+                                услугу.</span>
+                            <span id="err_fill_required" data-i18n="error_fill_required">Пожалуйста, заполните все
+                                обязательные поля (ФИО, Телефон, Email, Возраст, Ссылка на исследование).</span>
+                            <span id="err_invalid_phone" data-i18n="error_invalid_phone">Введите корректный номер
+                                телефона.</span>
+                            <span id="err_invalid_age" data-i18n="error_invalid_age">Укажите корректный возраст (от 0 до
+                                120 лет).</span>
+                            <span id="err_invalid_email" data-i18n="error_invalid_email">Введите корректный
+                                E-mail.</span>
+                            <span id="btn_creating_lead" data-i18n="btn_creating_lead">Создание заявки...</span>
+                            <span id="btn_pay_default" data-i18n="conf_btn_pay">Оплатить</span>
+                            <span id="err_network" data-i18n="error_network">Проблема с сетью. Пожалуйста, проверьте
+                                подключение.</span>
+                            <span id="err_server" data-i18n="error_server">Ошибка сервера при создании заявки.
+                                Попробуйте позже.</span>
+                        </div>
+
+                        <button id="submitBtn" form="configuratorForm" type="submit" disabled
+                            class="relative w-full flex items-center justify-center py-4 px-6 rounded-xl bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-all opacity-50 cursor-not-allowed shadow-lg shadow-blue-600/30">
+                            <svg id="submitBtnSpinner" class="hidden animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                    stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                </path>
+                            </svg>
+                            <span id="submitBtnText" data-i18n="conf_btn_pay">Оплатить</span>
+                        </button>
+                    </div>
+
+                    <!-- Инструкция на Десктопе -->
+                    <div class="hidden lg:block p-6 bg-blue-50 rounded-3xl border border-blue-100">
+                        <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
+                            <i data-lucide="info" class="w-5 h-5 text-blue-600"></i> <span
+                                data-i18n="conf_instruction_title">Как загрузить исследование?</span>
+                        </h3>
+                        <ol class="list-decimal list-inside text-sm text-slate-700 space-y-2 mb-4">
+                            <li data-i18n="conf_instr_1">Создайте ZIP-архив с файлами DICOM.</li>
+                            <li data-i18n="conf_instr_2">Загрузите архив в облако (Яндекс.Диск, Google Drive или Mail.ru
+                                Cloud).</li>
+                            <li data-i18n="conf_instr_3">Создайте ссылку для доступа к файлу.</li>
+                            <li data-i18n="conf_instr_4">Вставьте полученную ссылку в соответствующее поле.</li>
+                        </ol>
+                        <h3 class="font-bold text-slate-900 mt-6 mb-2 flex items-center gap-2">
+                            <i data-lucide="clock" class="w-5 h-5 text-blue-600"></i> <span
+                                data-i18n="conf_schedule_title">Режим работы</span>
+                        </h3>
+                        <p class="text-sm text-slate-700 border-l-4 border-blue-500 pl-3 py-1 bg-white p-2 rounded-r">
+                            <span data-i18n="conf_schedule_1">Принимаем заявки 24/7.</span><br>
+                            <span data-i18n="conf_schedule_2">Обработка с 09:00 до 21:00.</span><br>
+                            <span class="text-xs text-slate-500 block mt-1" data-i18n="conf_schedule_3">Оплаченные после
+                                21:00 заказы обрабатываются в 09:00 следующего дня.</span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-400 text-sm">
+                © <span id="footerYear">2026</span>
+                Радиологический дата-центр
+            </p>
+        </div>
+    </footer>
+
+    <!-- Иконки Lucide -->
+    <script src="js/lib/lucide.min.js"></script>
+    <script>if (window.lucide) lucide.createIcons();</script>
+
+    <script>
+        const y = document.getElementById('footerYear');
+        if (y) y.textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Inputmask для телефона -->
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+
+    <!-- ES Modules Initialization -->
+    <script type="module">
+        import { initUI } from './js/service-configurator/ui.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            initUI();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--
+  ╔══════════════════════════════════════════════════════════════════════════════╗
+  ║                                                                              ║
+  ║   РДЦ — СТРАНИЦА ВРАЧЕЙ                                                     ║
+  ║   Полный список специалистов центра с подробными профилями                  ║
+  ║                                                                              ║
+  ╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Наши специалисты — РДЦ</title>
+
+    <!-- Альтернативные языковые версии -->
+    <link rel="alternate" hreflang="ru" href="https://rdc-rt.ru/index.html" />
+    <link rel="alternate" hreflang="en" href="https://rdc-rt.ru/index-en.html" />
+    <link rel="alternate" hreflang="tt" href="https://rdc-rt.ru/index-tt.html" />
+    <link rel="alternate" hreflang="x-default" href="https://rdc-rt.ru/index.html" />
+
+    <meta name="description"
+        content="Специалисты Радиологического дата-центра (РДЦ) — квалифицированные врачи-рентгенологи Татарстана." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Наши специалисты — РДЦ" />
+    <meta property="og:description"
+        content="Специалисты Радиологического дата-центра (РДЦ) — квалифицированные врачи-рентгенологи Татарстана." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Подключение локальных шрифтов Inter -->
+    <link rel="stylesheet" href="fonts/inter.css" />
+
+    <!-- Подключение локальных стилей -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+</head>
+
+<body class="bg-white text-slate-800 font-[Inter]">
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 shadow-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3 group" aria-label="РДЦ">
+                    <img src="./images/logo-new.png" alt="RdC Logo"
+                        class="w-12 h-12 transition-transform group-hover:scale-105" />
+                    <div class="flex flex-col">
+                        <span class="text-lg font-extrabold tracking-tight text-slate-900 leading-none"
+                            data-i18n="logo_short">РДЦ</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-semibold"
+                            data-i18n="logo_subtitle">Дата-центр</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                        data-i18n="hero_btn_about">О центре</a>
+                    <a href="services.html"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                        data-i18n="nav_services">Услуги</a>
+                    <a href="doctors.html" class="text-sm font-medium text-blue-600 font-bold transition-colors"
+                        data-i18n="nav_team">Наши специалисты</a>
+                    <a href="index.html#partners"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+                        data-i18n="nav_partners">Сотрудничество</a>
+
+                    <!-- Языки -->
+                    <div class="flex items-center gap-2">
+                        <a href="doctors.html"
+                            class="px-2 py-1 rounded text-sm font-bold transition-all bg-blue-600 text-white"
+                            title="Русский" data-i18n="lang_short">RU</a>
+                        <a href="doctors-tt.html"
+                            class="px-2 py-1 rounded text-sm font-bold transition-all bg-slate-100 hover:bg-blue-50 text-blue-700"
+                            title="Татарча">TT</a>
+                        <a href="doctors-en.html"
+                            class="px-2 py-1 rounded text-sm font-bold transition-all bg-slate-100 hover:bg-blue-50 text-blue-700"
+                            title="English">EN</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════ ОСНОВНОЙ КОНТЕНТ ═══════════════════ -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Хлебные крошки -->
+            <nav class="mb-8 text-sm text-slate-500" aria-label="Breadcrumb">
+                <a href="index.html" class="hover:text-blue-600 transition-colors" data-i18n="hero_btn_about">О
+                    центре</a>
+                <span class="mx-2">→</span>
+                <span class="text-slate-900 font-semibold" data-i18n="nav_team">Наши специалисты</span>
+            </nav>
+
+            <!-- Заголовок -->
+            <div class="text-center mb-16">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4" data-i18n="nav_team">Наши
+                    специалисты</h1>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto" data-i18n="team_subtitle">Команда профессионалов с
+                    глубокой специализацией в различных модальностях лучевой диагностики.</p>
+            </div>
+
+            <!-- ═══════════════ ВРАЧ 1: САФИН Р.А. ═══════════════ -->
+            <section id="doctor-1" class="mb-12 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-5 sm:p-8 md:p-10 border border-slate-100">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <!-- Фото -->
+                        <div class="w-full md:w-1/4 flex-shrink-0 text-center flex flex-col items-center">
+                            <img src="images/doctors/ivanov.jpg" alt="Сафин Руслан Альбертович"
+                                class="w-full sm:w-48 h-auto sm:h-48 aspect-square object-cover rounded-2xl shadow-lg mx-auto" loading="lazy" />
+                            <span
+                                class="inline-block mt-3 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full"
+                                data-i18n="doctor1_position">Врач-рентгенолог второй категории</span>
+                        </div>
+                        <!-- Информация -->
+                        <div class="w-full md:w-3/4">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-1" data-i18n="doctor1_name">Сафин Руслан
+                                Альбертович</h2>
+                            <p class="text-blue-600 font-semibold text-sm mb-1" data-i18n="doctor1_position">
+                                Врач-рентгенолог второй категории</p>
+                            <p class="text-slate-500 text-sm mb-4" data-i18n="doctor1_spec">Специализация: МРТ головного
+                                мозга, позвоночника и суставов</p>
+
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full"
+                                    data-i18n="doctor1_exp">⏱ Стаж: 15+ лет</span>
+                            </div>
+
+                            <!-- Образование -->
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_education">Образование</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 mb-5 list-disc">
+                                <li data-i18n="doctor1_edu1">ФГБОУ ВО «Казанский государственный медицинский
+                                    университет» МЗ РФ, специальность «Педиатрия», квалификация «Врач», 2019 г.</li>
+                                <li data-i18n="doctor1_edu2">ФГАО ВО «Казанский (Приволжский) федеральный университет»
+                                    г. Казань, специальность «Рентгенология», квалификация «Врач-рентгенолог», 2021 г.
+                                </li>
+                                <li data-i18n="doctor1_edu3">Профессиональная переподготовка: ООО Центр повышения
+                                    квалификации и переподготовки «Луч знаний», специальность «Организация
+                                    здравоохранения и общественное здоровье», 2023 г.</li>
+                                <li data-i18n="doctor1_edu4">Аккредитация: Казанская государственная медицинская
+                                    академия филиал ФГБОУ ДПО "Российская медицинская академия непрерывного
+                                    профессионального образования" МЗ РФ, Рентгенология, 2021 г.</li>
+                                <li data-i18n="doctor1_edu5">Аккредитация: ФГБОУ ДПО "Российская медицинская академия
+                                    непрерывного профессионального образования" МЗ РФ, Организация здравоохранения и
+                                    общественное здоровье, 2025 г.</li>
+                            </ul>
+
+                            <!-- Сертификаты -->
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_certificates">Сертификаты</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 list-disc">
+                                <li data-i18n="doctor1_cert1">Сертификат специалиста по рентгенологии, действителен до
+                                    2027 г.</li>
+                                <li data-i18n="doctor1_cert2">Аккредитация специалиста (бессрочная)</li>
+                                <li data-i18n="doctor1_cert3">Сертификат по МРТ-диагностике нейродегенеративных
+                                    заболеваний</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ ВРАЧ 2: НЕМИРОВСКАЯ Т.А. ═══════════════ -->
+            <section id="doctor-2" class="mb-12 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-5 sm:p-8 md:p-10 border border-slate-100">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="w-full md:w-1/4 flex-shrink-0 text-center flex flex-col items-center">
+                            <img src="images/doctors/petrova.jpg" alt="Немировская Татьяна Анатольевна"
+                                class="w-full sm:w-48 h-auto sm:h-48 aspect-square object-cover rounded-2xl shadow-lg mx-auto" loading="lazy" />
+                            <span
+                                class="inline-block mt-3 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full"
+                                data-i18n="doctor2_position">Врач-рентгенолог высшей категории</span>
+                        </div>
+                        <div class="w-full md:w-3/4">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-1" data-i18n="doctor2_name">Немировская
+                                Татьяна Анатольевна</h2>
+                            <p class="text-blue-600 font-semibold text-sm mb-1" data-i18n="doctor2_position">
+                                Врач-рентгенолог высшей категории</p>
+                            <p class="text-slate-500 text-sm mb-4" data-i18n="doctor2_spec">Специализация: КТ органов
+                                грудной клетки и брюшной полости</p>
+
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full"
+                                    data-i18n="doctor2_exp">⏱ Стаж: 12+ лет</span>
+                                <span
+                                    class="px-3 py-1.5 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full"
+                                    data-i18n="doctor2_degree">Кандидат медицинских наук</span>
+                            </div>
+
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_education">Образование</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 mb-5 list-disc">
+                                <li data-i18n="doctor2_edu1">ГОУ ВПО Казанский государственный медицинский университет,
+                                    специальность «Лечебное дело», квалификация «Врач», 2006 г.</li>
+                                <li data-i18n="doctor2_edu2">ГОУ ДПО Казанская государственная медицинская академия,
+                                    специальность «Рентгенология», квалификация «Врач-рентгенолог», 2008 г.</li>
+                                <li data-i18n="doctor2_edu3">Аккредитация: ФГБОУ ДПО РМАНПО Минздрава России,
+                                    Рентгенология, 2024 г.</li>
+                            </ul>
+
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_certificates">Сертификаты</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 list-disc">
+                                <li data-i18n="doctor2_cert1">Сертификат специалиста по рентгенологии, действителен до
+                                    2028 г.</li>
+                                <li data-i18n="doctor2_cert2">Аккредитация специалиста (бессрочная)</li>
+                                <li data-i18n="doctor2_cert3">Сертификат по КТ-диагностике онкологических заболеваний
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ ВРАЧ 3: МИХАЙЛОВ И.М. ═══════════════ -->
+            <section id="doctor-3" class="mb-12 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-5 sm:p-8 md:p-10 border border-slate-100">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="w-full md:w-1/4 flex-shrink-0 text-center flex flex-col items-center">
+                            <img src="images/doctors/kozlova.jpg" alt="Михайлов Игорь Марсович"
+                                class="w-full sm:w-48 h-auto sm:h-48 aspect-square object-cover rounded-2xl shadow-lg mx-auto" loading="lazy" />
+                            <span
+                                class="inline-block mt-3 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full"
+                                data-i18n="doctor3_position">Врач-рентгенолог высшей категории</span>
+                        </div>
+                        <div class="w-full md:w-3/4">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-1" data-i18n="doctor3_name">Михайлов Игорь
+                                Марсович</h2>
+                            <p class="text-blue-600 font-semibold text-sm mb-1" data-i18n="doctor3_position">
+                                Врач-рентгенолог высшей категории</p>
+                            <p class="text-slate-500 text-sm mb-4" data-i18n="doctor3_spec">Специализация:
+                                рентгенография, костно-суставная система</p>
+
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full"
+                                    data-i18n="doctor3_exp">⏱ Стаж: 20+ лет</span>
+                                <span
+                                    class="px-3 py-1.5 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full"
+                                    data-i18n="doctor3_degree">Кандидат медицинских наук</span>
+                            </div>
+
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_education">Образование</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 mb-5 list-disc">
+                                <li data-i18n="doctor3_edu1">Казанский государственный медицинский институт,
+                                    специальность «Лечебное дело», квалификация «Врач», 1987 г.</li>
+                                <li data-i18n="doctor3_edu2">Повышение квалификации: ГБОУ ДПО «Казанская государственная
+                                    медицинская академия» Минздрава России, Организация здравоохранения и общественное
+                                    здоровье, 2011 г., 2016 г.</li>
+                                <li data-i18n="doctor3_edu3">КГМА — филиал ФГБОУ ДПО РМАНПО Минздрава России,
+                                    рентгенология, 2017 г.</li>
+                                <li data-i18n="doctor3_edu4">Аккредитация: ФГБОУ ДПО РМАНПО Минздрава России,
+                                    Организация здравоохранения и общественное здоровье, 2021 г.</li>
+                                <li data-i18n="doctor3_edu5">Аккредитация: ФГБОУ ДПО РМАНПО Минздрава России,
+                                    Рентгенология, 2022 г.</li>
+                            </ul>
+
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_certificates">Сертификаты</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 list-disc">
+                                <li data-i18n="doctor3_cert1">Сертификат специалиста по рентгенологии, действителен до
+                                    2026 г.</li>
+                                <li data-i18n="doctor3_cert2">Аккредитация специалиста (бессрочная)</li>
+                                <li data-i18n="doctor3_cert3">Сертификат по диагностике заболеваний опорно-двигательного
+                                    аппарата</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════════════ ВРАЧ 4: ГИЛЬВАНОВ Т.А. ═══════════════ -->
+            <section id="doctor-4" class="mb-12 scroll-mt-24">
+                <div class="bg-slate-50 rounded-3xl p-5 sm:p-8 md:p-10 border border-slate-100">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="w-full md:w-1/4 flex-shrink-0 text-center flex flex-col items-center">
+                            <img src="images/doctors/sidorov.jpg" alt="Гильванов Тимур Ахатович"
+                                class="w-full sm:w-48 h-auto sm:h-48 aspect-square object-cover rounded-2xl shadow-lg mx-auto" loading="lazy" />
+                            <span
+                                class="inline-block mt-3 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full"
+                                data-i18n="doctor4_position">Врач-рентгенолог</span>
+                        </div>
+                        <div class="w-full md:w-3/4">
+                            <h2 class="text-2xl font-bold text-slate-900 mb-1" data-i18n="doctor4_name">Гильванов Тимур
+                                Ахатович</h2>
+                            <p class="text-blue-600 font-semibold text-sm mb-1" data-i18n="doctor4_position">
+                                Врач-рентгенолог</p>
+                            <p class="text-slate-500 text-sm mb-4" data-i18n="doctor4_spec">Специализация: МРТ сердца и
+                                сосудов, онкологическая диагностика</p>
+
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-semibold rounded-full"
+                                    data-i18n="doctor4_exp">⏱ Стаж: 10+ лет</span>
+                            </div>
+
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_education">Образование</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 mb-5 list-disc">
+                                <li data-i18n="doctor4_edu1">ГОУ ВПО «Башкирский государственный медицинский
+                                    университет», специальность «Педиатрия», квалификация «Врач», 2010 г.</li>
+                                <li data-i18n="doctor4_edu2">ГБОУ ВПО «Башкирский государственный медицинский
+                                    университет» Минздрава России, специальность «Рентгенология», 2014 г.</li>
+                                <li data-i18n="doctor4_edu3">Повышение квалификации: ООО «Национальная академия
+                                    современных технологий», рентгенология, 2019 г.</li>
+                                <li data-i18n="doctor4_edu4">ФГБОУ ВО «Башкирский государственный медицинский
+                                    университет» Минздрава России, травматология и ортопедия, 2016 г.</li>
+                            </ul>
+
+                            <h3 class="text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="award" class="w-4 h-4 text-blue-500"></i>
+                                <span data-i18n="doctors_certificates">Сертификаты</span>
+                            </h3>
+                            <ul class="text-slate-600 text-xs leading-relaxed space-y-1.5 ml-6 list-disc">
+                                <li data-i18n="doctor4_cert1">Сертификат специалиста по рентгенологии, действителен до
+                                    2029 г.</li>
+                                <li data-i18n="doctor4_cert2">Аккредитация специалиста (бессрочная)</li>
+                                <li data-i18n="doctor4_cert3">Сертификат по МРТ-диагностике сердечно-сосудистых
+                                    заболеваний</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Кнопка возврата -->
+            <div class="text-center mt-8">
+                <a href="index.html"
+                    class="inline-flex items-center px-8 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all"
+                    data-i18n="doctors_page_back">← Вернуться на главную</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="bg-slate-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-400 text-sm">
+                © <span id="footerYear">2025</span>
+                <span data-i18n="hero_title_full">Радиологический дата-центр</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Иконки Lucide -->
+    <script src="js/lib/lucide.min.js"></script>
+    <script>lucide.createIcons();</script>
+
+    <script>
+        const y = document.getElementById('footerYear');
+        if (y) y.textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

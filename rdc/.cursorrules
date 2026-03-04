@@ -1,0 +1,27 @@
+# AI CONTEXT AND INSTRUCTIONS FOR AGENTS
+
+You are an AI assistant helping with the RDC landing page repository.
+
+## CONSTRAINTS & RULES (CRITICAL)
+
+1. **Architecture Restrictions:**
+   - **NO Node.js:** Do NOT attempt to initialize a `package.json`, install NPM packages, or suggest using build tools like Webpack, Vite, React, Vue, or Next.js. 
+   - **Tailwind CSS:** The project uses Tailwind via CDN (`<script src="https://cdn.tailwindcss.com"></script>`). Do NOT write arbitrary CSS stylesheets unless the effect cannot be achieved with Tailwind utility classes.
+   - **Static Output:** The deployed site must be raw HTML/CSS/JS without any server-side rendering or build servers.
+
+2. **Internationalization Workflow (i18n):**
+   - The site supports Russian (RU, default), English (EN), and Tatar (TT).
+   - Text translations live in `src/js/i18n/translations.js`.
+   - **DO NOT** edit files with `-en.html` or `-tt.html` suffixes visually (e.g., `dist/index-en.html`, `dist/accessible-tt.html`). These are auto-generated.
+   - **How to update content:** 
+     1. Add translations to `src/js/i18n/translations.js`.
+     2. Open `src/index.html` or `src/accessible.html`.
+     3. Ensure tags use `<tag data-i18n="key">Default Russian Text</tag>`.
+     4. ALWAYS run `python3 build.py` from the project root. This updates all language variants accurately by stripping out JS and injecting static HTML strings into the `dist/` directory.
+
+3. **Accessibility Integration:**
+   - `accessible.html` is maintained independently as a distinct user interface for visually impaired users. When adding a new feature or text to `index.html`, you must also add it to `accessible.html` unless explicitly told otherwise.
+   
+4. **Agent File Updates:**
+   - Whenever you implement a new architectural feature or change the `build.py` behavior, you MUST update `LOCALIZATION.md` and `README.md` to map those realities.
+   - Format responses to users clearly, acknowledging the codebase's strict zero-Node.js architecture constraint.
